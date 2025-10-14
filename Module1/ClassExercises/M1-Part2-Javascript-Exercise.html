@@ -17,7 +17,27 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Articles</a></li>
+                
             </ul>
+            
+            <hr/>
+            
+            <section class="shipping-address">
+            
+                <h4>Shipping Address</h4>
+                <form>
+                    <label for="street">Street</label>
+                    <input type="text" id="street"/>
+
+                    <label for="suburb">Suburb</label>
+                    <input type="text" id="suburb"/>
+
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode"/>
+
+                    <input type="submit" id="submit" value="Order Now" onclick="order()"/>
+                </form>
+            </section>
         </nav>
         <article>
             <h2>Article heading</h2>
@@ -70,5 +90,10 @@
             'green';
     </script>
 </body>
+<script>
+    function order(){
+        alert("Your order will be shipped soon.");
+    }
+</script>
 
 </html>
