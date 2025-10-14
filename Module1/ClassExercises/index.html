@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M1-Part2-HTML-Practice</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+<script>
+    function changeFontColor() {
+        document.getElementById("p1").style.color = "blue";
+    }
+    
+</script>
 
 <body>
     <header>
@@ -16,13 +22,13 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="M1-Part2-HTML-elements.html">HTML Elements</a></li>
-                <li><a href="M1-Part2-HTML-images.html">HTML Images</a></li>
-                <li><a href="M1-Part2-HTML-tables.html">HTML Tables</a></li>
+                <li><a href="./M1-Part2-HTML-elements.html">HTML Elements</a></li>
+                <li><a href="./M1-Part2-HTML-images.html">HTML Images</a></li>
+                <li><a href="./M1-Part2-HTML-tables.html">HTML Tables</a></li>
             </ul>
         </nav>
         <article>
-            <h2>Article heading</h2>
+            <h2 id="p1">Article heading</h2>
             <p>Paragraph...</p>
             <a href="https://www.google.com/">More information...</a>
         </article>
@@ -37,6 +43,10 @@
     <footer>
         <p>@copyright 2025. all rights reversed</p>
     </footer>
+
+    <div>
+        <button onclick="changeFontColor()">Change Color</button>
+    </div>
 </body>
 
 </html>
