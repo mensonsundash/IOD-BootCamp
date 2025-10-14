@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <script>
-    function changeFontColor() {
+    function changeStyle() {
         document.getElementById("p1").style.color = "blue";
+        document.getElementById("p1").style.fontSize= "40px";
+    }
+
+    function resetStyle() {
+        document.getElementById("p1").style.color="";
+        document.getElementById("p1").style.fontSize = "";
     }
     
 </script>
@@ -45,7 +51,10 @@
     </footer>
 
     <div>
-        <button onclick="changeFontColor()">Change Color</button>
+        <button onclick="changeStyle()">Change Color</button>
+    </div>
+    <div>
+        <button onclick="resetStyle()">Reset</button>
     </div>
 </body>
 

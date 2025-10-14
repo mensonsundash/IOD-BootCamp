@@ -1,0 +1,23 @@
+<html>
+<body>
+<h2>A Simple JavaScript Function</h2>
+<!-- This example button calls a function which displays an alert: -->
+<p id="demo"></p>
+<button id="p1" onclick="changeStyle()">Change Color</button>
+<button onclick="resetStyle()">Reset</button>
+<script>
+function changeStyle(){
+// alert('Hello World!')
+    document.getElementById("p1").style.backgroundColor = "blue";
+    document.getElementById("p1").style.color = "white";
+    document.getElementById("p1").style.fontSize = "40px";
+}
+
+function resetStyle() {
+    document.getElementById("p1").style.backgroundColor = "";
+    document.getElementById("p1").style.color = "";
+    document.getElementById("p1").style.fontSize = "";
+}
+</script>
+</body>
+</html>
