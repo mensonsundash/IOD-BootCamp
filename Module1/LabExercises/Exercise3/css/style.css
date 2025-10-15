@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    min-height:
+        100vh;
+    align-items: stretch;
+}
+
+.column {
+    background: goldenrod;
+    display:
+        flex;
+    flex-direction: column;
+    justify-content:
+        center;
+    align-items: center;
+    flex: 1;
+}
+
+.column img {
+    width: 30%;
+    height: auto;
+    object-fit:cover;
+    padding: 20px;
+}
+
+.column button {
+    padding: 10px;
+    border: none;
+    border-radius: 45px;
+    background-color: rgb(182, 75, 42);
+    color: #ffffff;
+    
+}
