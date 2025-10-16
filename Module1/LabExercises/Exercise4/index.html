@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-
+width, initial-scale=1.0">
+
+    <title>Module 1 Exercise 3</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="column" id="column1">
+            <h1 id="heading1">Simple Calculator</h1>
+            
+            <section class="card">
+                <p>Enter two numbers, pick an operation, then click <em>Calculate</em>.</p>
+                <div class="row">
+                    <div>
+                        <label for="numA">First number</label><br />
+                        <input id="numA" type="number" min="0"/>
+                    </div>
+                    <div>
+                        <label for="op">Operation</label><br />
+                        <select id="op">
+                            <option value="add">Add (+)</option>
+                            <option value="sub">Subtract (−)</option>
+                            <option value="mul">Multiply (×)</option>
+                            <option value="div">Division (÷)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="numB">Second number</label><br />
+                        <input id="numB" type="number" min="0"/>
+                    </div>
+                </div>
+                <button id="calc-btn" type="button" onclick="calculate()">Calculate</button>
+                <button class="reset" onclick="reset()">Reset All</button>
+                <div id="calc-result" class="result"></div>
+            </section>
+        </div>
+        
+        <div class="column" id="column2">
+            <h1 id="heading2">Greetings!</h1>
+            <input type="text" id="name" class="user-input" placeholder="Type your name">
+            
+            <button onclick="greeting()">Hola!</button>
+            <div id="greet-result" class="result"></div>
+        </div>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+</html>
