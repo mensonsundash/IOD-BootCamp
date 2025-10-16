@@ -98,3 +98,19 @@ input[type=submit]:hover {
     background-color: #fa9908;
     
 }
+
+
+.home-icon {
+    position: fixed;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(151, 157, 159, 0.8);
+    border: none;
+    border-radius: 5px;
+}
+.home-icon a {
+    text-decoration:none;
+}
+.home-icon a:hover {
+    background-color: white;
+}

@@ -12,6 +12,10 @@
             min-width: 600px;
             width: 100%;
         }
+        .table-container {
+            padding: 120px 50px 50px 50px;
+            
+        }
         thead th {
             background-color: #1f2937;
             color: white;
@@ -22,60 +26,82 @@
             border-bottom: 1px solid #e5e7eb;
             padding: 10px;
         }
+        
+        .home-icon {
+            position: fixed;
+            padding: 10px;
+            margin: 20px;
+            background-color: rgba(151, 157, 159, 0.8);
+            border: none;
+            border-radius: 5px;
+        }
+        .home-icon a {
+            text-decoration:none;
+        }
+        .home-icon a:hover {
+            background-color: white;
+        }
     </style>
 </head>
 
 <body>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Topic</th>
-                <th>Area</th>
-                <th>Level</th>
-                <th>Time / mins</th>
-                <th>Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Arrays & Loops</td>
-                <td>JavaScript</td>
-                <td>easy</td>
-                <td>20</td>
-                <td>Map/filter/reduce small tasks</td>
-            </tr>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    
+    <div class="table-container">
+        <h2>Table Example</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Topic</th>
+                    <th>Area</th>
+                    <th>Level</th>
+                    <th>Time / mins</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Arrays & Loops</td>
+                    <td>JavaScript</td>
+                    <td>easy</td>
+                    <td>20</td>
+                    <td>Map/filter/reduce small tasks</td>
+                </tr>
 
-            <tr>
-                <td>Arrays & Loops</td>
-                <td>JavaScript</td>
-                <td>easy</td>
-                <td>20</td>
-                <td>Map/filter/reduce small tasks</td>
-            </tr>
-            <tr>
-                <td>Flexbox Layout</td>
-                <td>CSS</td>
-                <td>medium</td>
-                <td>25</td>
-                <td>Two-column responsive layout</td>
-            </tr>
-            <tr>
-                <td>REST API route</td>
-                <td>Node/Express</td>
-                <td>medium</td>
-                <td>30</td>
-                <td>GET /items with query params</td>
-            </tr>
-            <tr>
-                <td>SQL SELECT + JOIN</td>
-                <td>Database</td>
-                <td>hard</td>
-                <td>35</td>
-                <td>Inner vs left join practice</td>
-            </tr>
+                <tr>
+                    <td>Arrays & Loops</td>
+                    <td>JavaScript</td>
+                    <td>easy</td>
+                    <td>20</td>
+                    <td>Map/filter/reduce small tasks</td>
+                </tr>
+                <tr>
+                    <td>Flexbox Layout</td>
+                    <td>CSS</td>
+                    <td>medium</td>
+                    <td>25</td>
+                    <td>Two-column responsive layout</td>
+                </tr>
+                <tr>
+                    <td>REST API route</td>
+                    <td>Node/Express</td>
+                    <td>medium</td>
+                    <td>30</td>
+                    <td>GET /items with query params</td>
+                </tr>
+                <tr>
+                    <td>SQL SELECT + JOIN</td>
+                    <td>Database</td>
+                    <td>hard</td>
+                    <td>35</td>
+                    <td>Inner vs left join practice</td>
+                </tr>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
