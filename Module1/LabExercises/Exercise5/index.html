@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M1 Lab Exercise 5</title>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
     
+    <div class="container">
+        <div class="home-icon">
+            <a href="../../../index.html">🏠︎ Back to Home</a>
+        </div>
+        
+        <h3>Input Original Value: [ <code id="input-value" style="font-style: italic;"></code> ]</h3>
+
+        <div class="output-area">
+            <h2>Array Visualizer</h2>
+            <table>
+                <tr id="row-index"></tr>
+                <tr id="row-value"></tr>
+            </table>
+        </div>
+
+        <hr/>
+
+        <div class="replace-array">
+            <h4>1. Replacing element value at selected positions <small>(Default: 1 & 4)</small></h4>
+            <input type="text" id="inputValue1" placeholder="Type your value for position" />
+            <select id="selectPosition1" style="margin-right: 25px;">
+                <option value="0">0</option>
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        
+            <input type="text" id="inputValue2" placeholder="Type your value for position" />
+            <select id="selectPosition2">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4" selected>4</option>
+            </select> 
+        
+            <button id="changeValue" onclick="replaceValue()">Replace it!</button>
+        </div>
+        
+        
+        <hr />
+
+        <div class="add-array">
+            <h4>2. Adding new element to the beginning of the array</h4>
+            <input type="text" id="addInputValue" placeholder="Type your value" />
+            <button id="addValue" onclick="addValue()">Add at beginning</button>
+        </div>
+        <hr />
+
+        <div class="remove-array">
+            <h4>3. Removing element at the end of the array</h4>
+            <button id="removeValue" onclick="removeValue()">Remove from end</button>
+        </div>
+    </div>
 </body>
 <script type="text/JavaScript" src="./js/script.js"></script>
+
 </html>
