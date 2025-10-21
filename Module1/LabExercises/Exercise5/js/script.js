@@ -1,17 +1,8 @@
 let arrayValue = ['value1','value2','value3','value4','value5'];
+//variable assignment for getting DOM of table rows for Indexes and Values
+let rowIndex = document.getElementById('row-index');
+let rowValue = document.getElementById('row-value');
 
-// // replacing value at position 1 & 4
-// arrayValue[1] = 'anotherValue1';
-// arrayValue[4] = 'anotherValue4';
-
-// // adding new value at beginning
-// arrayValue.unshift('beginAddNewValue')
-
-// //removing element from the end
-// arrayValue.pop();
-
-
-// console.log(arrayValue);
 
 /**
  * Functions definition returning on input values
@@ -27,6 +18,29 @@ function changeValue(value1, value2, position1, position2){
     return newArrayValue;
 }
 
+//function to renderArray into graphical visualization with HTML child append
+function renderArray(arrVal){
+    //clearing existing cells before creating new one
+    while(rowValue.firstChild) { rowValue.removeChild(rowValue.firstChild); }
+    while(rowIndex.firstChild) { rowIndex.removeChild(rowIndex.firstChild); }
+
+    //iterating new event driven values with callback to create each column cells of table 
+    arrVal.forEach((value, index) => {
+        let createValue = document.createElement("td");
+        let createIndex = document.createElement("td");
+
+        createValue.textContent = value;
+        createIndex.textContent = index;
+
+        //appending td cells into each rows for row: index and its row: values
+        rowValue.appendChild(createValue);
+        rowIndex.appendChild(createIndex);
+    });
+
+}
+
+
+
 /**
  * Functions on event actions like button onclick
  */
@@ -39,9 +53,7 @@ function replaceValue(){
     let position2 = document.getElementById("selectPosition2").value;
 
     let result = changeValue(value1, value2, position1, position2);
-
-    //showing replace result value
-    document.getElementById("replaceResult").innerText = result;
+    renderArray(result);
 }
 
 function addValue() {
@@ -50,8 +62,7 @@ function addValue() {
     
     // adding/unshifting to add new element at the beginning of array
     newArrayValue.unshift(inputValue);
-    
-    document.getElementById('addResult').innerText = newArrayValue;
+    renderArray(newArrayValue);
 }
 
 function removeValue() {
@@ -60,21 +71,8 @@ function removeValue() {
     //removing element from end of an array
     newArrayValue.pop();
 
-    document.getElementById('removeResult').innerText = newArrayValue;
+    renderArray(newArrayValue);
 }
 
-let rowValue = document.getElementById('row-value');
-let rowIndex = document.getElementById('row-index');
-
-
-//Showing original value
-arrayValue.forEach((value, index) => {
-    let createValue = document.createElement("td");
-    let createIndex = document.createElement("td");
-
-    createValue.textContent = value;
-    createIndex.textContent = index;
-    rowValue.appendChild(createValue);
-    rowIndex.appendChild(createIndex  );
-});
+renderArray(arrayValue);
 document.getElementById("input-value").innerText = arrayValue;
