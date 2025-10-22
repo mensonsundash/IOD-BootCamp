@@ -39,6 +39,17 @@ function renderArray(arrVal){
 
 }
 
+function resetArray() {
+    //calling render with input static value
+    renderArray(arrayValue);
+
+    document.getElementById("inputValue1").value = "";
+    document.getElementById("inputValue2").value = "";
+    document.getElementById("addInputValue").value = "";
+    document.getElementById("selectPosition1").value = 1;
+    document.getElementById("selectPosition2").value = 4;
+}
+
 
 
 /**
