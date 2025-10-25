@@ -47,6 +47,11 @@ body {
     color: white;
 }
 
+#resultValue{
+    font-size: 30px;
+    font-weight: 700;
+}
+
 
 /* Home return back icon for each page */
 .home-icon a {
