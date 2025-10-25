@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: goldenrod;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    width: 320px;
+    text-align: center;
+    
+}
+
+.controls {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.controls #dice-image img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#rollBtn {
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+
+/* Home return back icon for each page */
+.home-icon a {
+    text-decoration:none;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgba(151, 157, 159, 0.8);
+    border: none;
+    border-radius: 5px;
+}
+.home-icon a:hover {
+    background-color: white;
+}
