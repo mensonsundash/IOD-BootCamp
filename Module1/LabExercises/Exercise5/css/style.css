@@ -46,8 +46,15 @@ input,select{
     background: #f2f2f2;
 }
 
-.replace-array, .add-array, .remove-array {
+.replace-array, .add-array, .remove-array, .reset-array {
     padding-left: 10%;
+}
+.reset-array button{
+    background-color: #1a76ff;
+}
+
+.reset-array button:hover{
+    background-color: #0054d1;
 }
 
 /* Home return back icon for each page */

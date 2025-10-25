@@ -36,18 +36,17 @@ function renderArray(arrVal){
         rowValue.appendChild(createValue);
         rowIndex.appendChild(createIndex);
     });
-
 }
 
 function resetArray() {
-    //calling render with input static value
-    renderArray(arrayValue);
-
     document.getElementById("inputValue1").value = "";
     document.getElementById("inputValue2").value = "";
     document.getElementById("addInputValue").value = "";
     document.getElementById("selectPosition1").value = 1;
     document.getElementById("selectPosition2").value = 4;
+
+    //calling render with input static value
+    renderArray(arrayValue);
 }
 
 
@@ -87,3 +86,4 @@ function removeValue() {
 
 renderArray(arrayValue);
 document.getElementById("input-value").innerText = arrayValue;
+console.log(arrayValue);
