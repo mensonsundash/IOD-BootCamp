@@ -27,8 +27,16 @@ body {
     height: 100px;
     object-fit: contain;
 }
+.controls select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    outline: none;
+    background: #fff;
+}
 
-#rollBtn {
+.button {
     padding: 1rem;
     font-size: 1rem;
     font-weight: 600;
