@@ -57,4 +57,4 @@ let bookArray = [
 ];
 
 //printing the book array with 5 book objects
-console.log(bookArray[0])
+console.log(bookArray)
