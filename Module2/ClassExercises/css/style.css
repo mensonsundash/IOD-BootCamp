@@ -1,0 +1,30 @@
+
+/* Type > Class > Id > Inline */
+li {
+    background-color: yellow;
+}
+
+h1, h2 {
+    background-color: green;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.class1 {
+    color: blue;
+    background-color: pink;
+    font-weight: bold;
+}
+
+/* .class1 h2{
+    background-color: aquamarine;
+} */
+div {
+    background-color: blue;
+}
+
+#link {
+    background-color: red;
+}

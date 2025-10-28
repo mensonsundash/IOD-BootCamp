@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - HTML Multimedia</title>
+</head>
+
+<body>
+    
+    <section>
+        <label>Audio:</label>
+        <audio src="https://www.youtube.com/watch?v=EngW7tLk6R8" controls></audio>
+
+        <label>Video:</label>
+        <video id="video1">
+            <source src="https://www.youtube.com/watch?v=EngW7tLk6R8" type="video/webm">Sorry, your browser doesn't suppor this video
+            <source src="https://www.youtube.com/watch?v=EngW7tLk6R8" tpe="video/mp4">Sorry, your browser doesn't suppor this video
+        </video>
+    </section>
+    <section>
+        <button onclick="PlayVideo()">Play</button>
+        <button onclick="PauseVideo()">Pause </button>
+    </section>
+
+    <section>
+        <figure>
+            <img src="./images/" />
+            <figcaption>Caption on the image</figcaption>
+        </figure>
+        
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Names</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" style="background: yellow;">1</td>
+                    <td>Jionji</td>
+                    <td>Perous</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Hellghio</td>
+                    <td>Jinjing</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+    
+</body>
+    <script>
+        function PlayVideo(){
+            document.getElementById("video1").play();
+        }
+
+        function PauseVideo(){
+            docuemnt.getElementById("video1").pause();
+        }
+    </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - HTML Forms</title>
+
+    
+</head>
+
+<body>
+    
+    <section>
+        <form id="form1" action="./M2-Part2-HTML-Multimedia.html" method="post">
+            <div>
+                <label for="UserName">User Name:</label>
+                <input type="text" name="UserName" id="username"/>
+            </div>
+            <div>
+                <label for="Password">Password<label>
+                <input type="password" name="Password" id="password"/>
+            </div>
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" name="Email" id="email"/>
+            </div>
+            <div>
+                <label for="NoOfChildren">No. Of Children</label>
+                <select name="NoOfChildren" id="NoOfChildren">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div>
+                <!-- <input type="submit" value="Submit" /> -->
+                 <button onclick="FormAction()">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+<script>
+    document.getElementById("form1").addEventListener("submit", function (event) {
+        event.preventDefault();
+    });
+    function FormAction () {
+        let username = document.getElementById('username').value;
+        console.log(username.length)
+        if(username.length <= 4){
+            alert("Short name: Kindly enter more characters than 4");
+        }
+        
+    }
+</script>
+</html>
