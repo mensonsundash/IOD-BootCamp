@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <style>
+        div {
+            background-color: gray;
+            font-style: italic;
+            color: brown;
+        }
+
+        p {
+            color: inherit;
+        }
+
+        em {
+            color: initial;
+        }
+
+        input[type=text] {
+            color: inherit;
+
+        }
+    </style>
+    <link rel="stylesheet" href="/css/home-icon.css" />
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    <div id="div1">
+        <p>A paragraph that demonstrates the initial <br> and Inherit properties in CSS.</p>
+    </div>
+    <div id="div2">
+        <p>The quick brown fox <em>jumps</em> over the lazy dog.</p>
+    </div>
+    <div>
+        <form>
+            <div>
+                <label>Username: </label>
+                <input type="text" name="username" />
+            </div>
+            <div>
+                <label>Password: </label>
+                <input type="password" name="username" />
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

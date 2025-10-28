@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <style>
+        body {
+            background: lightgray;
+            font-family: sans-serif;
+        }
+
+        body,
+        ul,
+        li {
+            margin: 0;
+        }
+
+        header {
+            background: midnightblue;
+            color: white;
+        }
+
+        nav ul.menu {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul.menu li {
+            padding: 1em;
+        }
+
+        main {
+            max-width: 80%;
+            margin: 1em auto;
+            background: white;
+        }
+
+        section#about {
+            border: 1px solid grey;
+            padding: 1em;
+        }
+
+        button {
+            background: midnightblue;
+            color: white;
+            font-weight: bold;
+            padding:
+                0.5em 1em;
+        }
+
+        #about button {
+            font-size: 18px;
+        }
+    </style>
+    <link rel="stylesheet" href="/css/home-icon.css" />
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    <header>
+        <nav>
+            <ul class="menu" id="header-nav">
+                <li>Menu Item #1</li>
+                <li>Menu Item #2</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <section id="about">
+            <h1>About</h1>
+            <ul>
+                <li>bullet point</li>
+            </ul>
+            <button>Click Here</button>
+        </section>
+        <section id="story">
+            <h1>Story</h1>
+            <ul>
+                <li>bulleting</li>
+            </ul>
+            <button>Press</button>
+        </section>
+    </main>
+
+</body>
+
+</html>
