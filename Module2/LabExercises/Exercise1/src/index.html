@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Module 2 Lab Exercise 1 HTML</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Lab exercise 1 of module 2 Front end development HTML" />
+  <meta name="keywords" content="Front end development HTML" />
+  <meta name="author" content="IOD" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="/">Home</a>
+    </nav>
+  </header>
+  <h1>Front end development - HTML</h1>
+
+  <!-- III. HTML Elements - div, span, p, pre, ul, li, ol, article START -->
+  <article>
+    <h2>Learning Element</h2>
+    <div>HTML Title</div>
+    <div>HTML Description</div>
+    <div>HTML Footer</div>
+    <!-- As Div creates a block space which will create a new line as div ends -->
+
+
+    <span>Header Title</span>
+    <span>Details</span>
+    <span>Date</span>
+    <!-- Span doesnot create block space as it will align side by side without any new line -->
+
+    <!-- p tag collapse spaces and new lines -->
+    <p>p represent paragraph
+      that collapse all the extra spaces and new lines
+    </p>
+
+    <!-- Pre tags saves the structure of the text inside it -->
+    <pre>
+      Text in             a pre element 
+      is displayed in a fixed-width 
+      font, and it preserves 
+      both          spaces and 
+      line breaks
+    </pre>
+
+    <!-- Unordered list -->
+    <ul>
+      <li>Unorder List 1</li>
+      <li>Unorder List 2</li>
+      <li>Unorder List 3</li>
+      <li>Unorder List 4
+        <ul>
+          <li>Nest 1</li>
+          <li>Nest 2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Ordered list -->
+    <ol>
+      <li>Order list 1</li>
+      <li>Order list 2</li>
+      <li>Order list 3
+        <ol>
+          <li>Nest 1</li>
+          <li>Nest 2</li>
+        </ol>
+      </li>
+    </ol>
+  </article>
+  <!-- III. HTML Elements - div, span, p, pre, ul, li, ol, article END -->
+
+  <!-- IV. HTML Elements - Tables (table, thead, tbody, tr, td, th) START -->
+  <article>
+    <h2>Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">Sno.</th>
+          <th>Course Title</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>HTML</td>
+          <td>Front-end Development</td>
+          <td>Web Development</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jenkins</td>
+          <td>Deployment</td>
+          <td>CI/CD</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Node</td>
+          <td rowspan="2">Backend Development</td>
+          <td>Web Development</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Docker</td>
+          <td>Container Mangement</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  <!-- IV. HTML Elements - Tables (table, thead, tbody, tr, td, th) END -->
+
+  <!-- IV. HTML Elements - img, video, audio START -->
+  <article>
+    <h2></h2>
+  </article>
+  <!-- IV. HTML Elements - img, video, audio END -->
+
+  
+  <main>
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>
