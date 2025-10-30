@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - Grid Layout</title>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <style>
+        .container {
+            width: 60%;
+            border: 2px solid red;
+            display: grid;
+            /* grid-template-rows: min-content 1fr min-content;
+            grid-template-columns: repeat(4, [col] 1fr ); */
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            border: 1px solid black;
+            font-size: 20px;
+        }
+
+        .item5 {
+            grid-column-start: 2;
+            grid-column-end: span col4-start;
+            grid-row-start: 3;
+            grid-row-end: span 2;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/home-icon.css" />
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    
+    <div class="container">
+        <div class="child">
+            First
+        </div>
+        
+        <div class="child">
+            Second
+        </div>
+
+
+        <div class="child">
+            Third
+        </div>
+
+        <div class="child">
+            Fourth
+        </div>
+
+        <div class="child item5">
+            <!-- Fifth -->
+            <div>
+                <form action="">
+                    <label for="">Username</label>
+                    <input type="text">
+                </form>
+            </div>
+        </div>
+
+        <div class="child">
+            Sixth
+        </div>
+
+        <div class="child">
+            Seventh
+        </div>
+
+    </div>
+
+</body>
+
+</html>

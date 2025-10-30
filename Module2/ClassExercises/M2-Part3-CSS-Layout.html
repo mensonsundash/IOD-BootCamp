@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <link rel="stylesheet" href="../../css/home-icon.css" />
+    <style>
+        .parentdiv {
+            display: inline-block;
+            float: left;
+            border: 2px solid black;
+        }
+        .childdiv {
+            display: inline;
+            border: 1px solid green;
+        }
+        .float-image {
+            float: start;
+        }
+        .float-image img {
+            width: 350px;
+            height: auto;
+            border: none;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    <div class="parentdiv">
+        <div class="childdiv">
+            First
+        </div>
+        <div class="childdiv">
+            Second
+        </div>
+        <div class="childdiv">
+            Third
+        </div>
+        <div class="childdiv">
+            Fourth
+        </div>
+        <div class="childdiv">
+            Fifth
+        </div>
+    </div>
+
+    <div class="float-image">
+            <img src="https://images.unsplash.com/photo-1729575846511-f499d2e17d79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFzaWMlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000"
+            alt="">
+            <P>This image is taken from online having details about the picture and pixels to it.</P>
+    </div>
+</body>
+
+</html>

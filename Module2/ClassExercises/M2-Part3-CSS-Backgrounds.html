@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <link rel="stylesheet" href="../../css/home-icon.css" />
+    <style>
+        body {
+            background-image: url("https://images.unsplash.com/photo-1729575846511-f499d2e17d79?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFzaWMlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000");
+            background-repeat: no-repeat;
+            background-position: cover;
+        }
+        button {
+            background: #227bff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px 5px 10px;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0d6dfd;
+        }
+
+        .card {
+            width: 20%;
+            padding: 2em;
+            background: white;
+            border: none;
+            border-radius: 15px;
+            
+        }
+        form {
+            display: flex;
+            flex: auto;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        input {
+            background-color: #ebebeb;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        input:focus {
+            background-color: #d3e5ff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    <h1>Sample html page</h1>
+    <p>Simple paragraph written for demonstration of background images.</p>
+    <section class="card">
+        <form action="">
+            <div>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username"/>
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" nmae="password"/>
+            </div>
+
+            <button>Submit</button>
+
+
+        </form>
+    </section>
+    
+</body>
+
+</html>

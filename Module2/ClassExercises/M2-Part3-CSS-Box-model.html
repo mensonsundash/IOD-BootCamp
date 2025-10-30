@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <style>
+        .box {
+            padding: 20px;
+            border: 2px solid black;
+            margin: 40px;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+    
+        .content-box {
+            box-sizing: content-box;
+            background: lightblue;
+            margin-bottom: 40px;
+        }
+    
+        .border-box {
+            box-sizing: border-box;
+            background: lightgreen;
+        }
+        .overflow {
+            border: 2px solid black; 
+            width: 150px; 
+            height: 150px; 
+            resize:both; 
+            overflow: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/home-icon.css" />
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    
+    <section class="content-box box">
+        <p>200px x 200px content box</p>
+        <p>Actual width is 244px = 200px + 2px + 2px (border) + 20px + 20px
+            (padding)</p>
+    </section>
+    <section class="border-box box">
+        <p>200px x 200px border box</p>
+        <p>Actual width is 200px (border and padding contribute to total)</p>
+    </section>
+    <section class="box overflow">
+        Content is too large for the container.Content is too large for the container.Content is too large for the container.Content is too large for the container.Content is too large for the container.
+    </section>
+
+</body>
+
+</html>
