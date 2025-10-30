@@ -10,19 +10,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
-    table, th, td {
+    table,
+    th,
+    td {
       border: 1px solid black;
     }
+
+    nav {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    nav a {
+      text-decoration: none;
+      padding: 10px;
+      margin: 20px;
+      background-color: rgba(225, 130, 62, 0.8);
+      border: none;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: rgba(247, 126, 39, 0.8);
+    }
   </style>
+  <link rel="stylesheet" href="../../../../css/home-icon.css" />
 </head>
 
 <body>
+  <div class="home-icon">
+    <a href="../../../../index.html">🏠︎ Back to Home</a>
+  </div>
   <header>
     <nav>
       <!-- works like <a href="/index.html">Home</a> -->
-      <a href="/">Home</a>
+       <!-- VII Adding a link from Home to Form page START -->
+      <a href="#">Home</a>
+      <a href="./form.html">Forms</a>
+      <!-- VII Adding a link from Home to Form page END -->
     </nav>
   </header>
+
   <h1>Front end development - HTML</h1>
 
   <!-- III. HTML Elements - div, span, p, pre, ul, li, ol, article START -->
@@ -122,11 +148,32 @@
 
   <!-- IV. HTML Elements - img, video, audio START -->
   <article>
-    <h2></h2>
+    <h2>HTML Elements Img, Video</h2>
+    <img src="https://picsum.photos/400/400" alt="Image can't load" width="400" height="400"/>
+    <img src="./assets/html_lab_image.jpg" alt="Image can't find" width="400" height="400" />
+
+    <video autoplay width="250">
+        <source src="./assets/flower.webm" type="video/webm">
+        Sorry, your browser doesn't support embedded videos.
+    </video>
+
+    <!-- I have removed controls tag and instead, autoplay attribute has been inserted. -->
+    <figure>
+      <audio autoplay src="./assets/t-rex-roar.mp3">
+          Your browser does not support the <code>audio</code> element.
+      </audio>
+      <figcaption>A short audio clip demonstrating the HTML audio tag.</figcaption>
+    </figure>
+   
   </article>
   <!-- IV. HTML Elements - img, video, audio END -->
 
+  <!-- V. HTML Elements - Forms START -->
+
+  <!-- V. HTML Elements - Forms END -->
   
+
+
   <main>
   </main>
 
