@@ -11,14 +11,29 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "firstName": "Random",
+      "lastName": "different",
+      "coding_language": "HTML",
+      "vehicle1": "Bike",
+      "vehicle2": "Car",
+      "brand": "Mercedez",
+      "id": 2
+    },
+    {
+      "firstName": "Random",
+      "lastName": "different",
+      "coding_language": "HTML",
+      "vehicle1": "Bike",
+      "vehicle2": "Car",
+      "brand": "Mercedez",
+      "id": 3
     }
   ],
   "profile": {
-    "firstName": "menson",
-    "lastName": "sundash",
-    "coding_language": "javascript",
-    "vehicle1": "Bike",
-    "vehicle2": "Car",
-    "brand": "Toyota"
+    "firstName": "",
+    "lastName": "",
+    "brand": "BMW"
   }
 }

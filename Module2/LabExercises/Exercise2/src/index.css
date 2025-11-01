@@ -1,0 +1,133 @@
+/* I. Selectors */
+
+/* 1.1 using type selectors */
+article {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+/* 1.2 using class selectors */
+.style-me1 {
+    color: #ff0000;
+}
+/* 1.3 using id selectors */
+#style-me2 {
+    color: #0000ff;
+}
+/* 1.4 using specific selectors */
+p.style-me1#style-me2 {
+    color: purple;
+}
+/* === 2.Combinators ===
+    Next-sibling (+)
+    Child (>)
+    Subsequent sibling (~)
+    Descendant (" ")
+    Namespace separator (|)
+    Selector list (,)
+    === Combinators ===
+ */
+/* 2.1 using decendant combinator (" ") */
+.my-descendants-are-styled p {
+    background: #ff0000;
+}
+/* 2.2 using child combinator ( > )*/
+.my-descendants-are-styled>p{
+    background: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+    /* 1 */
+    background-color: rgb(240, 240, 240);
+    margin: 1em 0.5em;
+    padding: 1em 0.5em;
+    /* 2 */
+    width: 65vw;
+    height: 10vh !important;
+        /* 2.3 -answer => While resizing browser the content overflow from the given box with dimensions*/
+    /* 3 */
+    border: 10px  solid rgb(210, 210, 210);
+    /* 4 
+    Border-box: width/height you set include content+padding+border
+    Content-box: width/height you set applies only to content box - padding and border are added on top of it  */
+    box-sizing: content-box;
+    /* 5 
+    overflow:
+          auto: gives automtic scrollbar
+          hidden: hides the overflow part inside border  
+          scroll: gives automatic scrollbar even not required but scrolls only where required.
+     */
+    overflow:hidden;
+
+    /* 6
+    set ouline around border without disturbing content size */
+    outline: dashed #b3b3b3;
+    /* 7
+     */
+    border-radius: 1em;
+    /* 8 */
+    background-image: url("https://img.freepik.com/free-vector/blue-abstract-gradient-wave-vector-background_53876-111548.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+/* 1 */
+.position-absolute {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    background-color: bisque;
+    padding: 10px;
+}
+/* 2 */
+.position-relative {
+    position: relative;
+    background-color:aquamarine;
+}
+            /* 2.3 
+                    - absolute positioning within relative: it will be absolute with relative to its parent
+                    - but if absolute doesn't have explicitely parent then it will become parent to root i.e html.
+
+                    like below:
+
+                    html {
+                        position: relative
+                    }
+                    .position-absolute {
+                        position: absolute;
+                    }
+
+            */
+            /* 2.4
+                if .position-absolute class has 
+                left:
+                right:
+                values then it will try to pull and fit up to given adjustment.
+            */
+
+/* 3 */
+.position-sticky {
+    position: sticky;
+    background-color: cornflowerblue;
+    padding: 10px;
+    top: 0;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
