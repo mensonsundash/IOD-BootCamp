@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <style>
+        section {
+            background-color: aliceblue;
+            color: blue;
+        }
+
+        .class1 {
+            color: red;
+        }
+
+        #div1 {
+            color: green;
+        }
+
+        section #div2 {
+            color: gray;
+        }
+
+        section div {
+            color: gray;
+        }
+
+        .section1 {
+            background-color: bisque;
+            color: blueviolet;
+        }
+
+        .section1 .class1 {
+            color: aquamarine;
+        }
+
+        a:hover {
+            background-color: blueviolet;
+        }
+
+        /* p::before{
+            content: "-->";
+        } */
+        p::after {
+            content: "!";
+        }
+
+        P::first-letter {
+            font-size: x-large;
+            color: red;
+        }
+
+        .underlined {
+            text-decoration: underline;
+        }
+
+        /* Media queries for device friendly */
+        @media screen and (min-width: 800px) and (max-width: 1200px) {
+            body {
+                font-size: 12px;
+                color: red;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/home-icon.css" />
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    <section class="section1">
+        <h1 class="class1">Main section of the web page</h1>
+        <div id="div1" style="color: brown;">
+            Information about the main section in details.
+        </div>
+        <div id="div2">
+            Second section of the main section.
+            <div>
+                sub div of div2
+            </div>
+        </div>
+        <div>
+            Third section of the main section.
+        </div>
+        <a href="https://google.com" class="class1">LInk</a>
+    </section>
+    <section>
+        <p>Frist paragraph detailing about software engineering cohort.</p>
+        <p class="underlined">Second paragraph about hte content of the course.</p>
+    </section>
+
+</body>
+
+</html>

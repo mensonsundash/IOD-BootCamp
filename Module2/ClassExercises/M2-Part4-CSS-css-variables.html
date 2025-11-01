@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Development Basics - CSS Selectors</title>
+
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <style>
+        :root{
+            --primary-color: blue;
+            --primary-border-color: red;
+            --primary-text-color: white;
+            --secondary-border-color: black;
+
+        }
+        .container {
+            width: 50%;
+            border: 2px solid var(--primary-border-color);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .child {
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary-color);
+            padding: 10px;
+            text-align: center;
+            color: var(--primary-text-color);
+            border: 1px solid var(--secondary-border-color);
+            font-size: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/home-icon.css" />
+</head>
+
+<body>
+    <div class="home-icon">
+        <a href="../../index.html">🏠︎ Back to Home</a>
+    </div>
+    
+    <div class="container">
+        <div class="child">
+            First
+        </div>
+        
+        <div class="child">
+            Second
+        </div>
+
+
+        <div class="child">
+            Third
+        </div>
+
+        <div class="child">
+            Fourth
+        </div>
+
+        <div class="child">
+            Fifth
+        </div>
+
+        <div class="child">
+            Sixth
+        </div>
+
+        <div class="child">
+            Seventh
+        </div>
+
+    </div>
+
+</body>
+
+</html>
