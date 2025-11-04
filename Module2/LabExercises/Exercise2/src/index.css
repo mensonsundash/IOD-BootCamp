@@ -122,12 +122,73 @@ p.style-me1#style-me2 {
 
 /* IV. Styling text */
 /* Put styles for questions 1-10 here */
-
+.text-style{
+    color: darkblue;
+    font-size: 24px;
+    /* line height depends on font-size
+     1 , 1rem, 1em = 24px as above.
+    */
+    line-height: 1;
+    font-weight: 400;
+    text-align:left;
+    letter-spacing:0.02em;
+    word-spacing: 0.3em;
+    text-transform: capitalize;
+    text-decoration:line-through ;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
 
 /* V. Styling links */
 /* Put styles for questions 1-3 here */
+/* 1 */
+a:link {
+    color: green;
+    font-size: medium;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* 2 */
+a:hover {
+    color:brown;
+    text-decoration: underline;
 
+}
+a:active {
+    color:orange !important;
+    text-decoration:line-through !important;
+}
+a:focus {
+    background-color: yellow;
+    color:black;
+    text-decoration:underline;
+}
+/* 3 */
+a:visited {
+    color: fuchsia;
+    font-style: italic;/*it actually doesn't implemented because limited style can only be applied*/
+}
 
 /* VI. calc() */
 /* Put styles for questions 1-3 here */
+/* 1 */
+.calc-style {
+    width: calc(100vw-100px);
+    background-color: aquamarine;
+}
+/* 2 */
+.fixed-width-col {
+    /* occupy space upto the width of the css size */
+    display: inline-block;
+    width: calc(100vw-350px);
+}
+/* 3 */
+.fluid-col {
+    display: inline-block;
+    width: 350px;
+}
