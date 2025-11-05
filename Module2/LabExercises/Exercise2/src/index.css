@@ -179,7 +179,7 @@ a:visited {
 /* 1 */
 .calc-style {
     width: calc(100vw-100px);
-    background-color: aquamarine;
+    background-color: #8cf0ff;
 }
 /* 2 */
 .fixed-width-col {
