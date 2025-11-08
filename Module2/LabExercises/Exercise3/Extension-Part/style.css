@@ -42,7 +42,7 @@ section {
 .card {
     display: flex;
     background: var(--white);
-    border-radius: 24px;
+    border-radius: 30px;
     align-items: center;
 }
 
@@ -62,7 +62,7 @@ section {
     text-align: center;
     gap: 1.5rem;
     border: none;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 50%;
     
 }
@@ -153,4 +153,43 @@ button{
     border-radius: 50px;
     cursor: pointer;
     font-size: 1.2rem;
+}
+
+/* Media query for responsive devices */
+
+@media screen and (max-width:750px){
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    /* center the whole card on the page */
+    section {
+        height: auto;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width:auto;
+    }
+    /* making each column a vertical flexbox */
+    
+    #column-1{
+        width: auto;
+        border-radius:0px 0px 30px 30px;
+    }
+    #column-2 {
+        width: 80%;
+    }
+
+    /* Wrap all 4 rows */
+    .summary-box {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+
 }
