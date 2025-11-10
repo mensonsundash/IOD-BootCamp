@@ -1,22 +1,175 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Module 2 - Flexbox Lab Exercise</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="This is a flexbox exercise" />
-    <meta name="keywords" content="HTML, CSS" />
-    <meta name="author" content="Institute of Data" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-  
-    <link rel="stylesheet" href="../../../../css/home-icon.css" />
-  </head>
-  
-<body>
-    <div class="home-icon">
-        <a href="../../../../index.html">🏠︎ Back to Home</a>
-    </div>
 
-    
+<head>
+  <title>Module 2 - Flexbox Lab Exercise</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="This is a flexbox exercise" />
+  <meta name="keywords" content="HTML, CSS" />
+  <meta name="author" content="Institute of Data" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../../../css/home-icon.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Option 2: Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+  <div class="home-icon">
+    <a href="../../../../index.html">🏠︎ Back to Home</a>
+  </div>
+
+  <header class="header" id="header">
+    <i class="header-toggle d-none material-symbols-outlined">menu</i>
+    <nav id="navMenu" class="nav-menu">
+      <ul>
+        <li><a href="#hero" class="hero-btn active"><i class="material-symbols-outlined">home</i><span>Home</span></a></li>
+        <li><a href="#about"><i class="material-symbols-outlined">person</i><span>About</span></a></li>
+        <li><a href="#resume"><i class="material-symbols-outlined">description</i><span>Resume</span></a></li>
+        <li><a href="#portfolio"><i class="material-symbols-outlined">collections</i><span>Portfolio</span></a></li>
+        <li><a href="#contact"><i class="material-symbols-outlined">mail</i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <!-- Hero section Start-->
+    <section id="hero" class="section hero">
+      <img src="assets/img/hero-bg.png" alt="No images Found">
+      <div class="container">
+        <h2>Menson Sundash</h2>
+        <p>I'm Developer</p>
+        <div class="social-links">
+          <a href="https://github.com/mensonsundash" target="_blank"><i class="material-symbols-outlined">code</i></a>
+          <a href="#"><i class="material-symbols-outlined">work</i></a>
+        </div>
+      </div>
+      
+
+    </section>
+    <!-- Hero section End-->
+
+    <!-- About section start-->
+    <section id="about" class="section about">
+      <div class="container section-title flex-column">
+        <h2>About</h2>
+        <p>
+          Hi, I’m Menson Sundash — a passionate learner and aspiring software engineer based in Sydney, Australia. I’m
+          currently studying Software Engineering at the Institute of Data in collaboration with the University of
+          Technology Sydney.
+          I’m deeply interested in how software shapes everyday life — from simple apps to complex cloud systems. My
+          goal is to build efficient, secure, and user-friendly applications while continuously improving my technical
+          and problem-solving skills.
+          Outside of study and coding, I’m a family-oriented person who loves learning new technologies, reading, and
+          exploring ways to grow both personally and professionally.
+        </p>
+      </div>
+      <div class="container section-content flex-column">
+        <h2>Software Engineer &amp; UI Enthusiast</h2>
+        <p>
+          I’m on a journey to become a well-rounded software engineer 
+          who can design, develop, and deploy scalable applications that make an impact.
+        </p>
+        <div class="flex-row">
+          <div class="flex-column">
+            <ul>
+              <li><strong>Birthday:</strong> <span>X Oct, 1989</span></li>
+              <li><strong>Website:</strong> <span>mensonsundash.github.io</span></li>
+              <li><strong>Phone:</strong> <span>+61 416 XXX XXX</span></li>
+              <li><strong>City:</strong> <span>Sydney, Australia</span></li>
+            </ul>
+          </div>
+          <div class="flex-column">
+            <ul>
+              <li><strong>Degree:</strong> <span>Bachelor</span></li>
+              <li><strong>Github:</strong> <span>https://github.com/mensonsundash</span></li>
+              <li><strong>Email:</strong> <span>mensonsundash@example.com</span></li>
+              <li><strong>Open to Work:</strong> <span>Availability</span></li>
+            </ul>
+          </div>
+        </div>
+        <p>I enjoy working through real-world projects that challenge me to think logically, 
+          solve problems efficiently, and write clean, maintainable code. 
+          My focus is on understanding software engineering fundamentals, teamwork, 
+          and modern development workflows that drive real results.
+        </p>
+      </div>
+    </section>
+    <!-- About section end-->
+
+    <!-- Resume section start-->
+    <section id="resume" class="section resume flex-column flex-center">
+      <div class="container section-title flex-column">
+        <h2>Resume</h2>
+        <p>
+          My resume highlights my current journey as a software engineering student
+          focused on building a strong foundation in modern web development and cloud technologies.
+          I’m eager to apply my knowledge in real-world projects and contribute to meaningful software solutions.
+        </p>
+
+      </div>
+
+      <div class="container section-content flex-column">
+        <h2>Professional Experience</h2>
+        <div class="resume-item float-left">
+          <h4>Web Developer Assistant</h4>
+          <h5>2021 -2023</h5>
+          <p><em>NSWIT Support, Sydney, AU</em></p>
+          <ul>
+            <li>Helped team members make small changes and updates on websites.</li>
+            <li>Assisted in editing and fixing code using HTML, CSS, and JavaScript.</li>
+            <li>Supported front-end design work and tested simple website functions.</li>
+            <li>Worked with developers to improve layouts and basic features.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+              <h4>Intern — Website Development</h4>
+              <h5>Jun 2021 - Sep 2021</h5>
+              <p><em>IntroCept, Sydney, AU</em></p>
+              <ul>
+                <li>Helped with small website updates using HTML and CSS.</li>
+                <li>Learned how websites are built and maintained by developers.</li>
+                <li>Assisted in basic code testing and design changes.</li>
+              </ul>
+            </div>
+      </div>
+
+    </section>
+    <!-- Resume section end-->
+
+    <!-- Portfolio section start-->
+    <section id="portfolio" class="section portfolio">
+      <div class="container section-title flex-column">
+        <h2>Portfolio</h2>
+        <p>
+          This section shows some of the small projects and websites
+          I’ve worked on while learning web development.
+          Each project helped me practice how HTML, CSS, and JavaScript work
+          together to make a website look and function properly.
+        </p>
+      </div>
+    </section>
+    <!-- Portfolio section end -->
+
+    <!-- Contact section start-->
+    <section id="contact" class="section contact">
+      <div class="container section-title flex-column">
+        <h2>Contact</h2>
+        <p>If you would like to reach me, you can send me a message using the form below.</p>
+
+      </div>
+    </section>
+    <!-- Contact section end-->
+  </main>
 </body>
+<script src="script.js"></script>
+
 </html>
