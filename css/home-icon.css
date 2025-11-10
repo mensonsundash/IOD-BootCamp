@@ -10,6 +10,7 @@
     background-color: rgba(151, 157, 159, 0.8);
     border: none;
     border-radius: 5px;
+    z-index: 20000;
 }
 
 .home-icon a:hover {
