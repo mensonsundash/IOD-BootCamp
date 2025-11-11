@@ -1,18 +1,23 @@
 
 /* Home return back icon for each page */
-.home-icon a {
-    text-decoration: none;
+.home-icon {
     position: fixed;
-    right: 15px;
     top: 15px;
-    padding: 10px;
-    margin: 20px;
+    left: 15px;
+    z-index: 20000;
+    
+}
+
+/* Make the button only as wide as its text */
+.home-icon a {
+    padding: 8px 14px;
     background-color: rgba(151, 157, 159, 0.8);
     border: none;
     border-radius: 5px;
-    z-index: 20000;
+    text-decoration: none;
+    color: black;
 }
 
 .home-icon a:hover {
-    background-color: white;
+    background-color: #67a9ff;
 }
