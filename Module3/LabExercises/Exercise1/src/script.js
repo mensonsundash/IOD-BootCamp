@@ -83,11 +83,11 @@ function getGreeting(name) {
 return 'Hello ' + name + '!';
 }
 
-//function expression syntax
+// a) function expression syntax
 let getGreetinged = function (name) {
     return 'Hello ' + name + '!';
 }
-//arrow function syntax
+// b) arrow function syntax
 let getGreetings = name => 'Hello ' + name + '!'; //(name) => 'Hello ' + name + '!';
 
 console.log(getGreeting("Robin")); //Hello Robin!
@@ -116,25 +116,37 @@ c) Update getCatchPhrase to use arrow function syntax and a conditional operator
 `;
 let answer_6 = `
 const westley = {
-name: 'Westley',
-numFingers: 5
-}
+  name: "Westley",
+  numFingers: 5,
+};
 const rugen = {
-name: 'Count Rugen',
-numFingers: 6
-}
+  name: "Count Rugen",
+  numFingers: 6,
+};
 const inigo = {
-firstName: 'Inigo',
-greeting(person) {
-let greeting = \`Hello $ {person.name}, my name is $ {this.firstName}. \`;
-console.log(greeting + this.getCatchPhrase(person));
-},
-getCatchPhrase(person) {
-return 'Nice to meet you.';
-}
-}
-inigo.greeting(westley)
-inigo.greeting(rugen)
+  firstName: "Inigo",
+  greeting(person) {                                         // a) including it in the greeting
+    let greeting = \`Hello \${person.name}, my name is \${this.firstName} \${this.lastName}.\`;
+    console.log(greeting + this.getCatchPhrase(person));
+  },
+  // b) completing getCatchPhrase function by implementing condition if fingers is 6 then it has it's famous quote
+    // getCatchPhrase(person){
+        // if(person.numFingers === 6 ){
+        //     console.log("You killed my father. Prepare to die.")
+        // }else{
+        //     console.log("Nice to meet you.");
+        // }   
+    // }
+  // c) converted getCatchPhrase into arrow function syntax with conditional operator.
+  getCatchPhrase: person => person.numFingers === 6 ? "You killed my father. Prepare to die." : "Nice to meet you.",
+};
+
+// a) Adding a lastName property
+inigo.lastName ="Montoya";
+
+inigo.greeting(westley);
+inigo.greeting(rugen);
+
 `;
 document.getElementById('question_6').innerHTML = question_6;
 document.getElementById('answer_6').innerHTML = answer_6;
@@ -163,22 +175,76 @@ d) Test your object by chaining all the method calls together in different combi
 `;
 let answer_7 = `
 const basketballGame = {
-score: 0,
-freeThrow() {
-this.score++;
-},
-basket() {
-this.score += 2;
-},
-threePointer() {
-this.score += 3;
-},
-halfTime() {
-console.log('Halftime score is '+this.score);
-}
-}
+  score: 0,
+  foul: 0,
+  freeThrow() {
+    this.score++;
+    // a) chaining to return the current object 
+    return this;
+  },
+  basket() {
+    this.score += 2;
+    // a) chaining to return the current object 
+    return this;
+  },
+  threePointer() {
+    this.score += 3;
+    // a) chaining to return the current object 
+    return this;
+  },
+    // c) Add a new object property to keep track of the number of fouls
+  fouls() {
+    this.foul++;
+    return this;
+  },
+  halfTime() {
+    // console.log("Halftime score is " + this.score);
+    console.log(\`
+        It's Halftime 
+             Score : \${this.score},
+             Foul: \${this.foul}
+        \`);
+    return this;
+  },
+  // b) Add a new method to print the full time final score 
+  fullTime() {
+    console.log(\`
+        It's Fulltime 
+             Score : \${this.score},
+             Foul: \${this.foul}
+        \`);
+  },
+};
 //modify each of the above object methods to enable function chaining as below:
-basketballGame.basket().freeThrow().freeThrow().basket().threePointer().halfTime();
+// d) Test your object by chaining all the method calls together in different combinations.
+basketballGame
+    .basket()
+    .freeThrow()
+    .freeThrow()
+    .basket()
+    .fouls()
+    .threePointer()
+  .halfTime()
+    .freeThrow()
+    .basket()
+    .basket()
+    .fouls()
+    .fouls()
+    .threePointer()
+    .fouls()
+  .fullTime();
+
+  /**
+   * RESULT:
+   *    It's Halftime 
+             Score : 9,
+             Foul: 1
+        
+
+        It's Fulltime 
+             Score : 17,
+             Foul: 4
+   */
 `;
 document.getElementById('question_7').innerHTML = question_7;
 document.getElementById('answer_7').innerHTML = answer_7;
@@ -201,12 +267,49 @@ again with the new object.
 `;
 let answer_8 = `
 const sydney = {
-name: 'Sydney',
-population: 5_121_000,
-state: 'NSW',
-founded: '26 January 1788',
-timezone: 'Australia/Sydney'
+    name: 'Sydney',
+    population: 5_121_000,
+    state: 'NSW',
+    founded: '26 January 1788',
+    timezone: 'Australia/Sydney'
+};
+
+// b) creating new object
+const Adelaide = {
+    name: 'Adelaide',
+    population: 1_387_290,
+    state: 'SA',
+    founded: '28 December 1836',
+    timezone: 'Australia/Adelaide',
+    nickName: 'City of Churches',
+    originalName: 'Tarntanyya'
+};
+
+// a) Function with 'Obj' parameter to iterate (for...in) of object argument
+function ObjFunction(Obj) {
+    for(let objKey in Obj) {
+        console.log(\`\${objKey}: \${Obj[objKey]}\`)
+    }
 }
+// a) testing with sydney as an argument
+ObjFunction(sydney);
+// b) calling with new object argument
+ObjFunction(Adelaide);
+
+//RESULT:  
+name: Sydney
+population: 5121000
+state: NSW
+founded: 26 January 1788
+timezone: Australia/Sydney
+
+name: Adelaide
+population: 1387290
+state: SA
+founded: 28 December 1836
+timezone: Australia/Adelaide
+nickName: City of Churches
+originalName: Tarntanyya
 `;
 document.getElementById('question_8').innerHTML = question_8;
 document.getElementById('answer_8').innerHTML = answer_8;
@@ -237,6 +340,33 @@ let answer_9 = `
 let teamSports = ['Hockey', 'Cricket', 'Volleyball'];
 let dog1 = 'Bingo';
 let cat1 = { name: 'Fluffy', breed: 'Siberian' };
+
+// a) create a variable and add using push and unshift
+// let moreSports = teamSports;// a) (moreSports)-> point to same array (teamSports) in memory
+let moreSports = [...teamSports];// e) teamSports is now spread syntaxed so moreSports will create new array with teamSports
+moreSports.push('ZavelThrow');//push (insert at end of array)
+moreSports.unshift('Football');//unshift (insert at beginning of array)
+
+// b) primitive referencing to new variable 
+let dog2 = dog1;// copied only dog1 value to dog2 after that both variable are independent
+dog2 = "Lorenx"
+
+// c) object referencing to new variable 
+// let cat2 = cat1;//(cat2)-> point to same object (cat1) memory like array
+let cat2 = {...cat1};// e) cat1 is now spread syntaxed so cat2 will create new object with cat1
+cat2.name = 'Husky';
+//ANS==>: as in object referenced values: both shared same object
+// It will reference to  original and modify to that one shared object in memory 
+
+// d) printing teamsports, dog1, and cat1 
+console.log(teamSports);// ['Football', 'Hockey', 'Cricket', 'Volleyball', 'ZavelThrow']
+// ANS==>: as in Arrays Referenc values: both shared same array: 
+// so above modification happen in one shared array and changes seen in both.
+console.log(dog1)// 'Bingo'
+//ANS==>: as in primitive data types it will not change its original value
+console.log(cat1)// { name: 'Husky', breed: 'Siberian' }
+// ANS==>: as in object Referenc values: both shared same object: 
+// so above modification happen in one shared object and changes seen in both.
 `;
 document.getElementById('question_9').innerHTML = question_9;
 document.getElementById('answer_9').innerHTML = answer_9;
@@ -266,11 +396,47 @@ e) Add a canDrive method to both the constructor function and the class that ret
 if the person is old enough to drive.
 `;
 let answer_10 = `
-function Person(name, age) {
-this.name = name;
-this.age = age;
-this.human = true;
-}
+ function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.human = true;
+        // e) Added a canDrive arrow method property to the constructor function that returns true if the person is old enough to drive.
+        this.canDrive = () => {
+          if(this.age < 18) {
+            return false;
+          } 
+          return true;
+        }
+    }
+
+    let firstPerson = new Person("Haul", 17); // a) create new person and store it in a variable
+    let secondPerson = new Person("Cortel", 36);// b) create second person and store it in a variable
+
+    // c) print out each person object with properties
+    console.log(firstPerson.canDrive());//false
+    console.log(secondPerson.canDrive())//true
+
+    // d) rewrite function as a Class
+    class PersonClass {
+      constructor(name, age){
+        this.name = name;
+        this.age = age;
+        this.human = true;
+      }
+
+      // e) Added a canDrive method to the class that returns true if the person is old enough to drive.
+      canDrive() {
+        if(this.age < 18){
+          return false;
+        }
+        return true;
+      }
+
+    }
+
+    let thirdPerson = new PersonClass("Bison", 16);
+
+    console.log(thirdPerson.canDrive());// false
 `;
 document.getElementById('question_10').innerHTML = question_10;
 document.getElementById('answer_10').innerHTML = answer_10;
