@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations</title>
+</head>
+<style>
+
+  p {
+    /* animation: slider 0.10s ease-in forwards; */
+    /* animation-name: slideDown; */
+    /* animation-delay: 2s;
+    animation-duration: 10s;
+    animation-iteration-count: 5; */
+    transition: colour 2s;
+  }
+  a:hover {
+    colour: purple;
+  }
+
+
+  @keyframes slideRight {
+    0% {
+      margin-left:0%;
+      background-color: red;
+    }
+    /* 50% {
+      font-size: x-large;
+      background-color: orange;
+    } */
+    100% {
+      margin-left: 100%;
+      background-color: green;
+    }
+  }
+
+   @keyframes slideDown {
+    from {
+      margin-top:100%;
+      background-color: red;
+    }
+    /* 50% {
+      font-size: x-large;
+      background-color: orange;
+    } */
+    to {
+      margin-top: 10%;
+      background-color: green;
+    }
+  }
+</style>
+<body>
+  <p>Hello World!</p>
+</body>
+</html>
