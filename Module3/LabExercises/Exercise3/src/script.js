@@ -85,7 +85,43 @@ length of the period of inactivity instead of hardcoding to 1000ms
 c) Extend debounce to allow the original debounced function printMe to take an argument
 msg which is included in the console.log statement.
 `;
-let answer_3 = ``;
+let answer_3 = `
+// a) Create a debounce(func) decorator, 
+function debounce(func, ms) {// b) Extend the debounce decorator function to take a second argument ms
+    let timeOutId;
+
+    // c) argument passed in callback function
+    return function(...args) {
+        // cancel any previous scheduled function call
+        clearTimeout(timeOutId)
+
+        // schedule a new call 1000s from now
+        timeOutId = setTimeout(() => {
+            func(args); //calling original function
+        }, ms);
+    }
+
+}
+
+//original function
+function printMe(msg) { // c) argument to take the message
+    console.log(\`printing debounced message: $\{msg}\`);
+}
+
+//Decorate it
+printMe = debounce(printMe, 1000); //create this debounce function for a)
+
+//fire off 3 calls to printMe within 300ms - only the LAST one should print, after 1000ms of no calls
+// When you start passing argument now you can't call printMe without function reference
+// typeError fixing: need to pass a function reference to setTimeout, not the result of calling the function.
+// passing a function that later calls printMe
+setTimeout( () => printMe('#1 at 100ms'), 100);// schedules func at 1100ms
+setTimeout( () => printMe('#2 at 200ms'), 200);// cancel previous, reschedules at 1200ms
+setTimeout( () => printMe('#3 at 300ms'), 300);// cancel previous, reschedules at 1300ms
+
+// only the last one will print
+//result: printing debounced message #3 at 300ms
+`;
 document.getElementById('question_3').innerHTML = question_3;
 document.getElementById('answer_3').innerHTML = answer_3;
 
@@ -100,7 +136,52 @@ calls to do the same thing
 c) Extend one of the above functions to accept a limit argument, which tells it how many
 numbers to print before stopping.
 `;
-let answer_4 = ``;
+let answer_4 = `
+// a) Write a function printFibonacci() using setInterval that outputs a number in every second
+function printFibonacci(limit) { // c) Extend one of the above functions to accept a limit argument
+    let a = 1; //first fibonacci number
+    let b = 1; //second fibonacci number
+    let count = 0; //counter to match limit
+
+    const timerID = setInterval(() => {
+        console.log(a); //current number
+
+        // c) Extend one of the above functions to accept a limit argument
+        if(count >=limit) { 
+            clearInterval(timerID); 
+            return;
+        }
+
+        const next = a + b; //Fibonacci sequence pattern
+        a = b;
+        b =next;
+
+        count++;
+    }, 1000);
+}
+
+printFibonacci(7);
+
+// b) Write a new version printFibonacciTimeouts() that uses nested setTimeout
+function printFibonacciTimeouts() {
+    let a = 1;
+    let b = 1;
+
+    function nestedCall() {
+        console.log(a);
+        const next = a + b; //Fibonacci sequence pattern
+        a = b;
+        b = next;
+
+        // schedule the next call after 1 second
+        setTimeout(nestedCall, 1000);
+    }
+
+    // start nested function call
+    nestedCall();
+}
+printFibonacciTimeouts();
+`;
 document.getElementById('question_4').innerHTML = question_4;
 document.getElementById('answer_4').innerHTML = answer_4;
 
@@ -119,7 +200,42 @@ e) Change another property of the car by creating a clone and overriding it, and
 setTimeout still uses the bound value from d)
 
 `;
-let answer_5 = ``;
+let answer_5 = `
+let car = {
+  make: "Porsche",
+  model: "911",
+  year: 1964,
+
+  description() {
+    console.log(\`This car is a $\{this.make} $\{this.model} from $\{this.year}\`);
+  },
+};
+car.description(); //works
+// a) Fix the setTimeout call by wrapping the call to car.description() inside a function
+// setTimeout(() => car.description(), 200); //fails
+
+// d) Use bind to fix the description method so that it can be called from within setTimeout without a wrapper function
+const boundDescription = car.description.bind(car);
+setTimeout( boundDescription ,200 );// works without rapper 'no need () description()';
+
+// b) Change the year by cloning and overriding
+let newCar = {
+    ...car, //spread syntac will create new object.
+    year: 2020, //override yeyar
+    make: 'Ferrari' // e) Change another property of the car by creating a clone and overriding it
+}
+
+newCar.description(); ////d) This car is a Ferrari 911 from 2020
+// -  boundDescription is bound to the original car object, not the newerCar clone.
+// -  Cloning car into newerCar does not change the original car object.
+// -  bind locks in the this value to that exact object reference.
+
+//// c)  Does the delayed description() call use the original values or the new values from b)?
+// car.description(); //still uses car not newCar.
+// - The timeout callback explicitly calls car.description().
+// - It doesn’t know or care about newCar.
+// - Cloning car to newCar does not change car itself, it just creates another object.
+`;
 document.getElementById('question_5').innerHTML = question_5;
 document.getElementById('answer_5').innerHTML = answer_5;
 
