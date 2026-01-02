@@ -1,0 +1,13 @@
+.calc {
+  max-width: 360px;
+}
+
+.calc-screen {
+  height: 170px;
+  font-size: 2rem;
+  text-align: right;
+}
+.btn-key{
+  height: 60px;
+  font-size: 1.2rem;
+}

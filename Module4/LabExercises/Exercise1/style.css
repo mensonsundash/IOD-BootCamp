@@ -1,0 +1,22 @@
+.container {
+  width: auto;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  margin-top: 3rem;
+  
+}
+.child {
+  width: 400px;
+  height: auto;
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 1.2rem;
+  margin: 1.2rem;
+}

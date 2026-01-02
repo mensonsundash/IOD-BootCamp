@@ -21,3 +21,23 @@
 .home-icon a:hover {
     background-color: #67a9ff;
 }
+
+
+/* Make the button only as wide as its text */
+.general-button a {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 20000;
+
+    padding: 8px 14px;
+    background-color: rgba(151, 157, 159, 0.8);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.general-button a:hover {
+    background-color: #67a9ff;
+}

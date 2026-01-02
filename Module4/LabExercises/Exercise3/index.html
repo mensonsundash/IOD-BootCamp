@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4 Lab 3 Templates</title>
+    <link rel="stylesheet" href="../../../css/home-icon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-light">
+    <div class="home-icon">
+      <a href="../../../../index.html">🏠︎ Back to Home</a>
+    </div>
+
+    <!-- Template portion to be called on required tabs -->
+    <template id="cardTemplate">
+            <div class="card col-3">
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-content"></div>
+                </div>
+        </div>
+    </template>
+
+      
+
+
+    <!-- Tab buttons for each exercise part -->
+    <nav class="text-center" >
+        <div class="btn-group align-center">
+            <button class="btn btn-outline-primary tab-btn active" data-tab="tab1">Exercise 1</button>
+            <button class="btn btn-outline-primary tab-btn" data-tab="tab2">Exercise 2</button>
+            <button class="btn btn-outline-primary tab-btn" data-tab="tab3">Exercise 3</button>
+            <button class="btn btn-outline-primary tab-btn" data-tab="tab4">Extension</button>
+        </div>
+    </nav>
+
+    <!-- Content portion for each related tabs -->
+    <div class="row mt-3">
+        <div class="col-lg-12 p-5 tab-content" id="tab1">
+            <h3>Exercise 1 :</h3> 
+            <p>Modify the addCard function from the previous slide so that you can
+            pass content for the card dynamically.</p>
+                <div id="cardListA" class="row"></div>    
+        </div>
+
+        <div class="col-lg-12 p-5 tab-content d-none" id="tab2">
+            <h3>Exercise 2 :</h3>
+            <p>Call addCard repeatedly so that your cards are automatically generated
+            based on data from an array. This way you will create as many cards as
+            you need to display all the data in the array.</p>
+                <div id="cardListB" class="row"></div>
+        </div>
+
+        <div class="col-lg-12 p-5 tab-content d-none" id="tab3">
+            <h3>Exercise 3 - the artist’s portfolio:</h3>
+            <p>Populate the page dynamically, by generating an artist profile card which
+            includes cards representing the items in an artist's portfolio.</p>
+                <h2 id="artistName" class="text-center mb-4"></h2>
+                <div id="cardListC" class="row"></div>    
+        </div>
+
+        <div class="col-lg-12 p-5 tab-content d-none" id="tab4">
+            <h3>Exercise 3 extension - the artist’s portfolio:</h3>
+            <p>Populate the page dynamically, by generating an artist profile card which
+            includes cards representing the items in an artist's portfolio. <strong>Extension:
+            make an array of artists, all with multiple portfolio items.</strong></p>
+                <div id="artistList" class="row"></div>
+        </div>
+
+    </div>
+    
+</body>
+   
+<script src="js/TabToggler.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</html>
