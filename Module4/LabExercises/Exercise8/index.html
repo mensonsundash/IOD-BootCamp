@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab #5 Manage Data</title>
+    <link rel="stylesheet" href="../../../css/home-icon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- reference Luxon library --> 
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script> 
+  </head>
+  <body class="bg-light">
+    <div class="home-icon mt-5">
+      <a href="../../../../index.html">🏠︎ Back to Home</a>
+    </div>
+
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container pt-4">
+      
+      <!-- display loaded list of news -->
+      <div class="row g-3 pt-5">
+        <div class="col-lg-6 col-sm-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="card-content">
+                      <form action="" class="form-horizontal" id="addNews">
+                        <div class="form-group pt-2">
+                            <label for="dob">Your DOB:</label>
+                            <input type="date" name="dob" id="dob" class="form-control" required>
+                        </div>
+                        <div class="form-group pt-2">
+                            <label for="date2">Second Date</label>
+                            <input type="date" name="date2" id="date2" class="form-control">
+                        </div>
+                        <!-- <div class="form-group pt-3">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> -->
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <!-- Display Current Date -->
+          <div class="card text-center bg-warning h4 fw-bold" >
+            <div class="d-flex gap-2 align-items-center justify-content-center">
+              <span>Today:</span>
+              <div id="currentDateDisplay"></div>
+            </div>
+          </div>
+
+          <!-- 1) Calculate the number of days between your birthdate and the current date -->
+          <div class="card p-3">
+            <span> 1. Calculate number of days between birthdate and current date.</span>
+            <div class="d-flex align-items-center justify-content-between">
+              <button class="btn btn-primary" id="question1">Click</button>
+              <div id="result1"></div>
+            </div>
+          </div>
+
+          <!-- 2) Display the number of years, months, and days between your birthdate and current date. -->
+          <div class="card p-3">
+            <span> 2. Calculate number of years, months, and days between birthdate and current date.</span>
+            <div class="d-flex align-items-center justify-content-between">
+              <button class="btn btn-primary" id="question2">Click</button>
+              <div id="result2"></div>
+            </div>
+          </div>
+
+          <!-- 3) Given two dates, display the date closest to the current date -->
+          <div class="card p-3">
+            <span> 3. Given two dates, display the date closest to the current date.</span>
+            <div class="d-flex align-items-center justify-content-between">
+              <button class="btn btn-primary" id="question3">Click</button>
+              <div id="result3"></div>
+            </div>
+          </div>
+
+          <!-- 4) Given two dates, display whether the first date is before or after the second date -->
+          <div class="card p-3">
+            <span> 4. Given two dates, display whether the first date is before or after the second date </span>
+            <div class="d-flex align-items-center justify-content-between">
+              <button class="btn btn-primary" id="question4">Click</button>
+              <div id="result4"></div>
+            </div>
+          </div>
+
+          <!-- 5) Display the current time in London -->
+          <div class="card p-3">
+            <span> 5. Display the current time in London </span>
+            <div class="d-flex align-items-center justify-content-between">
+              <button class="btn btn-primary" id="question5">Click</button>
+              <div id="result5"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </section>
+  </body>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>
