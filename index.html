@@ -1,231 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IOD SE Bootcamp Modules</title>
+    
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SE Bootcamp Modules</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-        }
+  <body>
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm" >
+      <div class="container-fluid">
+        <button class="btn btn-outline-light d-lg-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarCanvas">
+          ☰
+        </button>
 
-        body {
-            font-family: sans-serif;
-        }
+        <a class="navbar-brand fw-bold" href="#">IOD Bootcamp Navigator</a>
 
-        header {
-            background-color: blue;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+        <div class="ms-auto d-none d-md-block text-white-50">
+          Oct 07, 2025 Cohort
+        </div>
+      </div>
+    </nav>
 
-        nav {
-            float: left;
-            background-color: gold;
-            width: 30%;
-            /* height: 300px; */
-            padding: 20px;
-        }
+    <div class="container-fluid">
+      <div class="row g-3 mt-2">
+        <!-- Desktop Sidebar -->
+        <aside class="col-lg-3 d-none d-lg-block">
+          <div class="card shadow-sm border-0">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div>
+                  <div class="fw-bold">Modules</div>
+                  <div class="muted-small">Exercises & labs</div>
+                </div>
+                <span class="badge text-bg-primary">IOD</span>
+              </div>
 
-        article {
-            background-color: whitesmoke;
-            float: left;
-            width: 70%;
-            height: auto;
-            padding: 20px;
-        }
+              <div class="sidebar-scroll">
+                <!-- Reuse the same accordion by repopulating from template -->
+                <div id="desktopMenu"></div>
+              </div>
+             
+            </div>
+          </div>
+        </aside>
 
-        /* Intro “hero” style */
-        .intro{
-        padding:20px;
-        background:#dee7fc;
-        border: none;
-        border-radius:15px;
-        }
-        .intro h1{ margin:0 0 10px; font-size:25px; }
-        .intro p{ margin:0; color:#334155; }
+        <!-- Main Content -->
+        <main class="col-lg-9">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+              <div
+                class="d-flex align-items-start justify-content-between flex-wrap gap-2"
+              >
+                <div>
+                  <h1 class="h3 fw-bold mb-2">
+                    IOD BootCamp — Exercises & Labs Navigator
+                  </h1>
+                  <p class="text-secondary mb-0">
+                    Welcome! This site collects every
+                    <strong>class exercise</strong> and
+                    <strong>lab</strong> from the Institute of Data Software
+                    Engineering bootcamp. Use the sidebar to open the pages you
+                    want to review.
+                  </p>
+                </div>
+                <div class="text-end">
+                  <span class="badge rounded-pill text-bg-success"
+                    >Organised</span
+                  >
+                  <div class="muted-small mt-1">Built with Bootstrap 5</div>
+                </div>
+              </div>
 
+              <hr class="my-4" />
 
-        footer {
-            clear: both;
-            background: #222;
-            color: #eee;
-            text-align: center;
-            padding: 0.5em;
-            font-size: 0.9em;
-        }
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="p-3 rounded-4 bg-primary bg-opacity-10 border">
+                    <div class="fw-semibold">Tip</div>
+                    <div class="text-secondary">
+                      Use Ctrl/Cmd + Click to open exercises in a new tab.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 rounded-4 bg-secondary bg-opacity-10 border">
+                    <div class="fw-semibold">Suggest improvement</div>
+                    <div class="text-secondary">
+                      Shoot at menson.sundash@gmail.com
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        article h2 {
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
+          <footer class="text-center text-secondary small py-4">
+            © 2026 — All rights reserved
+          </footer>
+        </main>
+      </div>
+    </div>
 
-<body>
-    <header>
-        <h1>Header</h1>
-    </header>
-    <section>
-        <nav>
-            <ul>
-                <!-- Module-1 exercises START -->
-                <li>Module 1
-                    <ul>
-                        <li>Class Exercise
-                            <ul>
-                                <li><a href="./Module1/ClassExercises/M1-Part2-HTML-elements.html">HTML Elements</a></li>
-                                <li><a href="./Module1/ClassExercises/M1-Part2-HTML-images.html">HTML Images</a></li>
-                                <li><a href="./Module1/ClassExercises/M1-Part2-HTML-tables.html">HTML Tables</a></li>
-                                <li><a href="./Module1/ClassExercises/M1-Part2-Javascript-Exercise.html">JavaScript Exercise</a></li>
-                            </ul>
-                        </li>
-                        <li>Lab Exercise
-                            <ul>
-                                <li><a href="./Module1/LabExercises/Exercise1/Module1-LabExercise-1.pdf">Exercise 1</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise2/Module1-LabExercise-2.pdf">Exercise 2</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise3/index.html">Exercise 3</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise4/index.html">Exercise 4</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise5/index.html">Exercise 5</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise6/index.html">Exercise 6</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise7/index.html">Exercise 7</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise8/index.html">Exercise 8</a></li>
-                                <li><a href="./Module1/LabExercises/Exercise9/index.html">Exercise 9</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <!-- Module-1 exercises END -->
+    <!-- Offcanvas Sidebar (Mobile) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarCanvas">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-bold">Modules</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Reuse the same accordion by repopulating from template -->
+        <div id="mobileMenu"></div>
+      </div>
+    </div>
 
-                 <!-- Module-2 exercises START -->
-                <li>Module2
-                    <ul>
-                        <li>Class Exercise
-                            <ul>
-                                <li><a href="./Module2/ClassExercises/M2-Part2-HTML-Descriptions.html">HTML-2-Description</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part2-HTML-Multimedia.html">HTML-2-Multimedia</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part2-HTML-Forms.html">HTML-2-Forms</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part2-HTML-iFrame.html">HTML-2-iFrame</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part2-HTML-canvas.html">HTML-2-Canvas</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Selectors.html">CSS-3-Selectors</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-query-selector.html">CSS-3-dom QuerySelector</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Combinators.html">CSS-3-Combinators</a>
-                                    <ul>
-                                        <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Combinators-classwork.html">Classwork</a></li>
-                                    </ul>
-                                </li>
-                                
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Inheritance.html">CSS-3-Inheritance</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-DimensionUnits.html">CSS-3-Dimension Units</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-displayStyles.html">CSS-3-Display</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-positions.html">CSS-3-Positions</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Backgrounds.html">CSS-3-Background</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-calc.html">CSS-3-Calc()</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Layout.html">CSS-3-Layout</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Box-sizing.html">CSS-3-Box Sizing</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Box-model.html">CSS-3-Box Model</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Flexbox-layout.html">CSS-3-Flexbox Layout</a>
-                                    <ul>
-                                        <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Flexbox-layout-class-exercise.html">Classwork</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./Module2/ClassExercises/M2-Part3-CSS-Grid-layout.html">CSS-3-Grid Layout</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part4-CSS-css-variables.html">CSS-4-Variables</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part4-CSS-media-queries.html">CSS-4-media-queries</a></li>
-                                <li><a href="./Module2/ClassExercises/M2-Part4-CSS-responsive-images.html">CSS-4-responsive-images</a>
-                                    <ul><li><a href="./Module2/ClassExercises/M2-Part4-CSS-responsive-picture-tag.html">CSS-4-responsive-picture-tag</a></li></ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>Lab Exercise
-                            <ul>
-                                <li><a href="./Module2/LabExercises/Exercise1/src/index.html">Exercise1</a>
-                                    <ul>
-                                        <li><a href="./Module2/LabExercises/Exercise1/src/form.html">Forms</a></li>
-                                        <li><a href="./Module2/LabExercises/Exercise1/Extension-Part/Module2-LabExercise1-extension.pdf">Extension-Part</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./Module2/LabExercises/Exercise2/src/index.html">Exercise2</a>
-                                    <ul>
-                                        <li><a href="./Module2/LabExercises/Exercise2/Extension-Part/part1/M2Lab2-entension.png" target="_blank">Extension-Part1</a></li>
-                                        <li><a href="./Module2/LabExercises/Exercise2/Extension-Part/part2">Extension-Part2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="./Module2/LabExercises/Exercise3/src/index.html">Exercise3</a>
-                                    <ul><li><a href="./Module2/LabExercises/Exercise3/Extension-Part/index.html">Extension-Part</a></li></ul>
-                                </li>
-                                <li><a href="./Module2/LabExercises/Exercise4/src/index.html">Exercise4</a></li>
-                                <li><a href="./Module2/LabExercises/Exercise5/src/index.html">Exercise5</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+    <!-- Template menu -->
+    <div class="d-none">
+        <template id="menuTemplate">
+            <!-- Accordion -->
+            <div class="accordion" id="modulesAccordion">
+                <!-- Module 1 -->
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#m1"
+                    aria-expanded="true"
+                    >
+                    Module 1
+                    </button>
+                </h2>
+                <div
+                    id="m1"
+                    class="accordion-collapse collapse show"
+                    data-bs-parent="#modulesAccordion"
+                >
+                    <div class="accordion-body">
+                    <div class="fw-semibold mb-1">Class Exercises</div>
+                    <div class="list-group list-group-flush mb-3">
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/ClassExercises/M1-Part2-HTML-elements.html"
+                        >HTML Elements</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/ClassExercises/M1-Part2-HTML-images.html"
+                        >HTML Images</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/ClassExercises/M1-Part2-HTML-tables.html"
+                        >HTML Tables</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/ClassExercises/M1-Part2-Javascript-Exercise.html"
+                        >JavaScript Exercise</a
+                        >
+                    </div>
 
-                </li>
-                <!-- Module-2 exercises END -->
+                    <div class="fw-semibold mb-1">Lab Exercises</div>
+                    <div class="list-group list-group-flush">
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise1/Module1-LabExercise-1.pdf"
+                        >Exercise 1</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise2/Module1-LabExercise-2.pdf"
+                        >Exercise 2</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise3/index.html"
+                        >Exercise 3</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise4/index.html"
+                        >Exercise 4</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise5/index.html"
+                        >Exercise 5</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise6/index.html"
+                        >Exercise 6</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise7/index.html"
+                        >Exercise 7</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise8/index.html"
+                        >Exercise 8</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module1/LabExercises/Exercise9/index.html"
+                        >Exercise 9</a
+                        >
+                    </div>
+                    </div>
+                </div>
+                </div>
 
-                <!-- Module-3 exercises START -->
-                <li>Module3
-                    <ul>
-                        <li>Class Exercise
-                            <ul><li></li></ul>
-                        </li>
-                        <li>Lab Exercise
-                            <ul>
-                                <li><a href="./Module3/LabExercises/Exercise1/src/index.html">1 JS Fundamental</a></li>
-                                <li><a href="./Module3/LabExercises/Exercise2/src/index.html">2 JS Intermediate</a></li>
-                                <li><a href="./Module3/LabExercises/Exercise3/src/index.html">3 JS Advance</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <!-- Module-3 exercises END -->
-                <!-- Module-4 exercies START -->
-                 <li>Module-4
-                    <ul>
-                        <li>Class Exercise
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </li>
-                        <li>Lab Exercise
-                            <ul>
-                                <li><a href="./Module4/LabExercises/Exercise1/index.html">Exercise 1</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise2/index.html">Exercise 2</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise3/index.html">Exercise 3</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise4/index.html">Exercise 4</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise5/index.html">Exercise 5</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise6/index.html">Exercise 6</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise7/index.html">Exercise 7</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise8/index.html">Exercise 8</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise9/index.html">Exercise 9</a></li>
-                                <li><a href="./Module4/LabExercises/Exercise10/index.html">Exercise 10</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                 </li>
-                 <!-- Module-4 exercies END -->
-            </ul>
-        </nav>
-        <article>
-            <section class="intro">
-                <h1>IOD BootCamp — Exercises & Labs Navigator</h1>
-                <p>
-                    Welcome! This site collects every <strong>class exercise</strong> and <strong>lab</strong> from the
-                    Institute of Data Software Engineering bootcamp (Oct 07, 2025 cohort). Use the
-                    <strong>sidebar</strong> to browse modules and open the pages you want to review the practiced exercises.
-                </p>
-            </section>
+                <!-- Module 2 -->
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#m2"
+                    >
+                    Module 2
+                    </button>
+                </h2>
+                <div
+                    id="m2"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#modulesAccordion"
+                >
+                    <div class="accordion-body">
+                    <div class="fw-semibold mb-1">Class Exercises</div>
+                    <div class="list-group list-group-flush mb-3">
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part2-HTML-Descriptions.html"
+                        >HTML Descriptions</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part2-HTML-Multimedia.html"
+                        >HTML Multimedia</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part2-HTML-Forms.html"
+                        >HTML Forms</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part2-HTML-iFrame.html"
+                        >HTML iFrame</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part2-HTML-canvas.html"
+                        >HTML Canvas</a
+                        >
 
-            
-        </article>
-    </section>
-    <footer>
-        <p>@copyright 2025. all rights reversed</p>
-    </footer>
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Selectors.html"
+                        >CSS Selectors</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-query-selector.html"
+                        >CSS querySelector</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Combinators.html"
+                        >CSS Combinators</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Inheritance.html"
+                        >CSS Inheritance</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-DimensionUnits.html"
+                        >CSS Units</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-displayStyles.html"
+                        >CSS Display</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-positions.html"
+                        >CSS Positions</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Backgrounds.html"
+                        >CSS Background</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-calc.html"
+                        >CSS calc()</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Layout.html"
+                        >CSS Layout</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Box-sizing.html"
+                        >CSS Box Sizing</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Box-model.html"
+                        >CSS Box Model</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Flexbox-layout.html"
+                        >CSS Flexbox</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part3-CSS-Grid-layout.html"
+                        >CSS Grid</a
+                        >
 
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part4-CSS-css-variables.html"
+                        >CSS Variables</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part4-CSS-media-queries.html"
+                        >CSS Media Queries</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/ClassExercises/M2-Part4-CSS-responsive-images.html"
+                        >Responsive Images</a
+                        >
+                    </div>
 
-</body>
+                    <div class="fw-semibold mb-1">Lab Exercises</div>
+                    <div class="list-group list-group-flush">
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/LabExercises/Exercise1/src/index.html"
+                        >Exercise 1</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/LabExercises/Exercise2/src/index.html"
+                        >Exercise 2</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/LabExercises/Exercise3/src/index.html"
+                        >Exercise 3</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/LabExercises/Exercise4/src/index.html"
+                        >Exercise 4</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module2/LabExercises/Exercise5/src/index.html"
+                        >Exercise 5</a
+                        >
+                    </div>
+                    </div>
+                </div>
+                </div>
 
+                <!-- Module 3 -->
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#m3"
+                    >
+                    Module 3
+                    </button>
+                </h2>
+                <div
+                    id="m3"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#modulesAccordion"
+                >
+                    <div class="accordion-body">
+                    <div class="fw-semibold mb-1">Lab Exercises</div>
+                    <div class="list-group list-group-flush">
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module3/LabExercises/Exercise1/src/index.html"
+                        >1 — JS Fundamental</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module3/LabExercises/Exercise2/src/index.html"
+                        >2 — JS Intermediate</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module3/LabExercises/Exercise3/src/index.html"
+                        >3 — JS Advanced</a
+                        >
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#m4"
+                    >
+                    Module 4
+                    </button>
+                </h2>
+                <div
+                    id="m4"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#modulesAccordion"
+                >
+                    <div class="accordion-body">
+                    <div class="fw-semibold mb-1">Lab Exercises</div>
+                    <div class="list-group list-group-flush">
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise1/index.html"
+                        >Exercise 1</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise2/index.html"
+                        >Exercise 2</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise3/index.html"
+                        >Exercise 3</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise4/index.html"
+                        >Exercise 4</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise5/index.html"
+                        >Exercise 5</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise6/index.html"
+                        >Exercise 6</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise7/index.html"
+                        >Exercise 7</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise8/index.html"
+                        >Exercise 8</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise9/index.html"
+                        >Exercise 9</a
+                        >
+                        <a
+                        class="list-group-item list-group-item-action"
+                        href="./Module4/LabExercises/Exercise10/index.html"
+                        >Exercise 10</a
+                        >
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- /accordion -->
+        </template>
+    </div>
+  </body>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
 </html>

@@ -1,0 +1,87 @@
+/* Light app background */
+body {
+  background: #f6f8fc;
+}
+
+/* Sidebar scroll area */
+.sidebar-scroll {
+  max-height: calc(100vh - 72px);
+  overflow: auto;
+}
+
+/* Make links nicer */
+.nav-link {
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+}
+.nav-link:hover {
+  background: rgba(13, 110, 253, 0.08);
+}
+
+/* Small helper text */
+.muted-small {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* ######################################### */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  float: left;
+  background-color: gold;
+  width: 30%;
+  / * height: 300px; * /
+  padding: 20px;
+}
+
+article {
+  background-color: whitesmoke;
+  float: left;
+  width: 70%;
+  height: auto;
+  padding: 20px;
+}
+
+/* Intro “hero” style * /
+.intro {
+  padding: 20px;
+  background: #dee7fc;
+  border: none;
+  border-radius: 15px;
+}
+.intro h1 {
+  margin: 0 0 10px;
+  font-size: 25px;
+}
+.intro p {
+  margin: 0;
+  color: #334155;
+}
+
+footer {
+  clear: both;
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 0.9em;
+}
+
+article h2 {
+  margin-bottom: 15px;
+} */
