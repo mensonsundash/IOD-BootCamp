@@ -3,11 +3,11 @@
 }
 
 .calc-screen {
-  height: 170px;
-  font-size: 2rem;
+  height: 70px !important;
+  font-size: 2rem !important;
   text-align: right;
 }
 .btn-key{
   height: 60px;
-  font-size: 1.2rem;
+  font-size: 1.5rem !important;
 }

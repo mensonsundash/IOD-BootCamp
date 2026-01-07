@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module 4 Lab 1 Figma</title>
 
-    <link rel="stylesheet" href="../../../css/home-icon.css" />
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CDN -->
     <link
@@ -17,82 +16,86 @@
   </head>
 
   <body class="bg-light">
-    <div class="home-icon">
-      <a href="../../../../index.html">🏠︎ Back to Home</a>
-    </div>
+    <div class="fixed-top">
+      <div class="container-fluid py-2">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <a class="btn btn-outline-success" href="../../../../index.html">🏠︎ Back to Home</a>
 
-    <div class="general-button" >
-        <a target="_blank" href="https://www.figma.com/proto/L7W6iGmK9BSgqOOisBvRxq/calculator?node-id=2-100&t=IHWmEEnhMhP0iQiz-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A3"> Click to preview live in FIGMA</a>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-primary" target="_blank" href="calculator-app-design.pdf"> Click to preview Documentation</a>
+
+              <a class="btn btn-outline-primary" target="_blank" href="https://www.figma.com/proto/L7W6iGmK9BSgqOOisBvRxq/calculator?node-id=2-100&t=IHWmEEnhMhP0iQiz-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A3"> Click to preview live in FIGMA</a>
+            </div>
+        </div>
+      </div>
     </div>
     
-
-
     <div class="container min-vh-100 d-flex justify-content-center align-items-center" >
       <div class="card shadow calc w-100">
         <div class="card-body">
           
           <input type="text" class="form-control calc-screen mb-3" value="0" readonly />
 
-          <div class="row g-0">
-            <div class="col-3 p-0">
+          <div class="row g-1">
+            <div class="col-3 p-1">
               <button id="reset" class="btn btn-outline-danger w-100 btn-key">C</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-outline-secondary w-100 btn-key" disabled>±</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-outline-secondary w-100 btn-key">%</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-warning w-100 btn-key">÷</button>
             </div>
 
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">7</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">8</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">9</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-warning w-100 btn-key">x</button>
             </div>
 
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">4</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">5</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">6</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-warning w-100 btn-key">-</button>
             </div>
 
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">1</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">2</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">3</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-warning w-100 btn-key">+</button>
             </div>
 
-            <div class="col-6 p-0">
+            <div class="col-6 p-1">
               <button class="btn btn-light w-100 btn-key">0</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">.</button>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-3 p-1">
               <button class="btn btn-light w-100 btn-key">=</button>
             </div>
           </div>
