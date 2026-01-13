@@ -1,5 +1,9 @@
 //require the express package
 const express = require('express')
+
+const swaggerui = require("swagger-ui-express");
+swaggerDocument = require("./swagger.json");
+
 const myAppRouter = require('./routes/myAppRoutes');
 const secondRouter = require('./routes/secondAppRoutes');
 const calculateRouter= require('./routes/calculatorRoutes');
@@ -18,6 +22,8 @@ const port2 = 3001;
 
 app.use(cors()); //resolve the cors blocking policy
 app.use(express.json());//enabling jason format as incoming data
+
+app.use("/api-docs", swaggerui.serve, swaggerui.setup(swaggerDocument));
 
 app.use("/", express.static('public'));
 
