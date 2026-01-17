@@ -7,6 +7,7 @@ const port = 3000;
 
 //importing routes
 const calculateRouter = require('./routes/calculateRoutes.js');
+const extraRouter = require('./routes/extraRoutes.js');
 
 // ################## REQ & RES
 app.get('/', (req, res) =>{
@@ -26,11 +27,23 @@ app.get('/', (req, res) =>{
     <div>
             <a href='http://localhost:${port}/calculate/divide?num1=6&num2=4'>Divide</a>
     </div>
+
+
+    <h2>Extension:</h2>
+    <div>
+        <a href='http://localhost:${port}/extra/maxmin?max=20'>Click Max</a>
+    </div>
+
+    <div>Extend to take query min
+        <a href='http://localhost:${port}/extra/maxmin?max=20&min=3'>Click Min</a>
+    </div>
+
     `;
     res.send(container)
 });
 
-app.use('/calculate', calculateRouter)
+app.use('/calculate', calculateRouter);
+app.use('/extra', extraRouter);
 
 // ################## LISTENING APP
 app.listen(port, () =>{

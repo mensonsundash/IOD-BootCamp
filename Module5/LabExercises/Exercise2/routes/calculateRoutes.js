@@ -1,6 +1,7 @@
+// ################## CREATE APP: REQUIRE EXPRESS PACKAGE
 const express = require('express');
 
-const router = express.Router();
+const router = express.Router(); //getting router module
 
 router.get('/', (req, res) => {
     res.send('Welcome to Calculation');
