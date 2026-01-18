@@ -30,12 +30,14 @@ app.get('/', (req, res) =>{
 
 
     <h2>Extension:</h2>
-    <div>
-        <a href='http://localhost:${port}/extra/maxmin?max=20'>Click Max</a>
+    <h3>extraRoute.js</h3>
+    
+    <div> Return a random number between 0 & provide max=20
+        <a href='http://localhost:${port}/extra/maxmin?max=20'>Random 0-Max</a>
     </div>
 
-    <div>Extend to take query min
-        <a href='http://localhost:${port}/extra/maxmin?max=20&min=3'>Click Min</a>
+    <div> Return a random number between provided min=3 & provide max=20
+        <a href='http://localhost:${port}/extra/maxmin?max=20&min=3'>Random Min-Max</a>
     </div>
 
     `;

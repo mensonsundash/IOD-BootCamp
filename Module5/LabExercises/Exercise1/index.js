@@ -8,7 +8,7 @@ const app2 = express(); // WEB SERVER-2
 
 //set the port
 const port = 3000; //port for WEB SERVER-1
-const port2 = 4000; //port for WEB SERVER-2
+const port2 = 3001; //port for WEB SERVER-2
 
 //################### request and response
 app.get('/', (req, res) => {

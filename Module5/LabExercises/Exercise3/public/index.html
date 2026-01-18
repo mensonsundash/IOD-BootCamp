@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M5 Lab Exercise 3</title>
 
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -56,49 +56,25 @@
             </div>
             
         </div>
+        <div class="row g-3 pt-5">
+            <div class="col-12">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h2>Extension:</h2>
+                        <p>Now, all the JavaScript and CSS files are moved to external files and placed inside the public folder of the backend.</p>
+                        <p>These assets are served by Express using express.static with its built-in utility (path) , 
+                            which makes them accesible through the same server running on http://locahost:3000, 
+                            and the browser fetches the script and css directly from the backend server keeping both frontend and backend under singel port.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script >
-    //DOM element list
-    const calculate = document.getElementById('calculate');
-    const number1 = document.getElementById('number1');
-    const number2 = document.getElementById('number2');
-    const operation = document.getElementById('operation');
-    let displayResult = document.getElementById('result');
-
-    // asynchronous function 
-    async function calculation() {
-        const num1 = number1.value.trim();
-        const num2 = number2.value.trim();
-        const opt = operation.value.trim();
-        if(!num1 || !num2) {
-            throw new Error("Please enter both number")
-        }
-        
-        // const response = await axios.get(`http://localhost:3000/calculate/${opt}?num1=${num1}&num2=${num2}`);
-        //axios get with params : opt is api type => "calculate/add"
-        const response = await axios.get(`http://localhost:3000/calculate/${opt}`, {
-            params: {num1, num2},
-        })
-        
-        return response.data; // responded by API
-
-    }
-
-    // click event calling asnchronous function calculation
-    calculate.addEventListener("click", async()  => {
-        try{
-            const result = await calculation();
-            displayResult.textContent = result.data.toFixed(2);
-
-        } catch(error){
-            alert(error.message)
-        }
-    });
-</script>
-
+<script src="js/script.js"></script>
 
 </html>
