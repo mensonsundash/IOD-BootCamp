@@ -1,0 +1,15 @@
+:root {
+  --pitch-green: #1db954;
+  --ink: #0b1220;
+  --muted: #6b7280;
+  --bg: #1c44b3;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.friends-body{
+    background: linear-gradient(180deg, rgba(13,110,253,0.08), rgba(25,135,84,0.06));
+}
