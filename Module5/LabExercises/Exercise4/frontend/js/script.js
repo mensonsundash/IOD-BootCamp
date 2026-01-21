@@ -16,8 +16,11 @@ const resetBtn = document.getElementById("resetBtn");
 const searchInput = document.getElementById("searchInput");
 const filterSelect = document.getElementById("filterSelect");
 const sortSelect = document.getElementById("sortSelect");
+const viewFriend = document.getElementById("viewFriend");
 const editFriend = document.getElementById("editFriend");
 const deleteFriend = document.getElementById("deleteFriend");
+const editForm = document.getElementById("editForm");
+
 // INITIAL LOAD
 async function loadAllFriends() {
     try{
@@ -60,6 +63,7 @@ function addData(data) {
     template.querySelector("#gender").innerText = data.gender;
 
     //adding id into each button
+    template.querySelector("#viewFriend").dataset.friendId = data.id; // add dataset friend-id on button
     template.querySelector("#editFriend").dataset.friendId = data.id; // add dataset friend-id on button
     template.querySelector("#deleteFriend").dataset.friendId = data.id; // add dataset friend-id on button
 
@@ -92,19 +96,45 @@ function renderData () {
     );
 }
 
-
-async function renderDataById(id) {
-    
+//asynchronous function to get data
+async function getDataById(id) {
+    let result = [];
     try{
         const response = await axios.get(`${backenURL}/friends/${id}`);
-        filteredFriends = response.data;
+            result = response.data;
     } catch(error) {
         console.error("Filter fetch error:", error);
-        filteredFriends = [];
+            result = [];
     }
-    document.getElementById('editId').innerText = filteredFriends.id
-    document.getElementById('editName').innerText = filteredFriends.name
-    document.getElementById('editGender').innerText = filteredFriends.gender
+    return result;
+}
+
+// asynchronous function to view data
+async function viewDataById(id) {
+    filteredFriends = await getDataById(id);
+    document.getElementById('viewId').innerText = filteredFriends.id
+    document.getElementById('viewName').innerText = filteredFriends.name
+    document.getElementById('viewGender').innerText = filteredFriends.gender
+    
+}
+
+//asynchronous function to edit data
+async function editDataById(id){
+    filteredFriends = await getDataById(id);
+
+    document.getElementById('editId').value = filteredFriends.id
+    document.getElementById('editName').value = filteredFriends.name
+    document.getElementById('editGender').value = filteredFriends.gender
+}
+
+async function updateData(id, data) {
+    try{
+        const response = await axios.put(`${backenURL}/friends/${id}`, data);
+        filteredFriends = response.data;
+        renderData();
+    } catch(error) {
+        console.error("Update Failed: ", error);
+    }
     
 }
 // function to reset
@@ -127,12 +157,15 @@ async function applyFiltersAndSort() {
         return;
     }
 
+
+    //################# using fetch to get dta from backend endpoint
     // fetch(`${backenURL}/friends/filter?letter=${query}&gender=${selectedCategory}`)
     //     .then((response) => response.json())
     //     .then((friends) => {
     //         filteredFriends = friends; //updating working arrayy data
     //     });
 
+    //using axios to get data from backend api endpoint
     try{
         const response = await axios.get(`${backenURL}/friends/filter?letter=${query}&gender=${selectedCategory}`);
         
@@ -152,18 +185,46 @@ filterSelect.addEventListener("change", applyFiltersAndSort);
 resetBtn.addEventListener("click", resetData);
 friendsList.addEventListener("click", (e) => {
     // const btn = e.target.closest("button[data-action]");
+    const btnView = e.target.closest("#viewFriend");
     const btnEdit = e.target.closest("#editFriend");
     const btnDelete = e.target.closest("#deleteFriend");
 
+    if(btnView) {
+        const id = Number(btnView.dataset.friendId);
+        viewDataById(id)
+    }
+
     if(btnEdit) {
         const id = Number(btnEdit.dataset.friendId);
-        renderDataById(id)
+        editDataById(id)
     }
+
     if(btnDelete){
         const id = Number(btnDelete.dataset.friendId);
         deleteDataById(id)
     } 
-})
+});
+
+editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+   
+    const editId = document.getElementById('editId').value;    
+    const editName = document.getElementById('editName').value.trim();
+    const editGender = document.getElementById('editGender').value.trim();
+    const updateFriend  ={
+        name: editName,
+        gender: editGender
+    }
+    
+    if(editId){
+        updateData(editId, updateFriend)
+    }
+
+    
+    
+});
+
+
 
 
 
