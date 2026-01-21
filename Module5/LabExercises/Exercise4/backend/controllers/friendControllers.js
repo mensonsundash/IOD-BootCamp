@@ -126,10 +126,7 @@ const deleteById = (req, res) =>{
     // remove the friend from the array
     const deleteFriend  = friends.splice(index, 1)[0];;
 
-    res.status(200).json({
-        message: `Friend with ID ${friendId} deleted`,
-        data: deleteFriend
-    })
+    res.status(200).json(friends)
 }
 
 module.exports = {getData, getByFilter, getInfo, getById, create, update, deleteById}

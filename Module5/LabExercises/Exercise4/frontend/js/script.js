@@ -137,6 +137,16 @@ async function updateData(id, data) {
     }
     
 }
+
+async function deleteDataById(id) {
+    try{
+        const response = await axios.delete(`${backenURL}/friends/${id}`);
+        filteredFriends =response.data;
+        renderData()
+    } catch(error) {
+        console.error('Delete Failed: ', error);
+    }
+}
 // function to reset
 function resetData(){
     searchInput.value = '';
