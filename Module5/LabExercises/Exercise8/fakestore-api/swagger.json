@@ -1,0 +1,40 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Fake Store Backend API",
+    "description": "Backendd Project Application API that fake data from DUMMYJSON for app.",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "PRODUCTS",
+      "description": "API for products in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/products": {
+        "get":{
+            "tags": ["Products"],
+            "summary":"Get all Products",
+            "description":"Fetch all products from DummyJSON via backend api",
+            "response":{
+                "200": {
+                    "description":"List of products"
+                }
+            }
+        }
+    }
+    
+  }
+}
+
+
