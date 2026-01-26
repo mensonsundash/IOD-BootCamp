@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../App.css";
 import Movie from "./Movie";
 
@@ -25,14 +24,6 @@ function MoviesList() {
     },
   ];
 
-  const [currentMovies, setCurrentMovies] = useState(movies);
-
-  const handleReverseList = () => {
-    let newMovies = [...currentMovies];
-    newMovies.reverse();
-    setCurrentMovies(newMovies);
-  }
-
   return (
     <>
       <div className="MoviesList componentBox">
@@ -40,11 +31,10 @@ function MoviesList() {
           {" "}
           {/* iterate over each movie, print the title in a list
            */}
-          {currentMovies.map((movie) => (
+          {movies.map((movie) => (
             <Movie key={movie.id} title={movie.title} year={movie.year} synopsis={movie.synopsis}></Movie>
           ))}
         </ul>
-        <button onClick={handleReverseList}>Reverse List</button>
       </div>
     </>
   );

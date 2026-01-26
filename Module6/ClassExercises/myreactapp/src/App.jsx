@@ -11,30 +11,44 @@ import ComplexComment from "./Pages/ComplexComment";
 import FullName from "./Pages/FullName";
 import Callout from "./Pages/Callout";
 import MoviesList from "./Pages/MoviesList";
+import Counter from "./Pages/Counter";
+import MoodChanger from "./Pages/MoodChanger";
+import BirthdayTranslator from "./Pages/BrthdayTranslator";
+import Weather from "./Pages/Weather";
+import LoginForm from "./Pages/LoginForm";
+import SampleUncontrolledForm from "./Pages/SampleUncontrolledForm";
+// import ExplodingBomb from "./Pages/ExploingBomb";
 
 // object storing comment data - passed as props
-const comment = {
-  date: new Date(),
-  text: "I hope you enjoy learning React!",
-  author: {
-    // author is also an object
-    name: "Hello Kitty",
-    avatarUrl: "https://placekitten.com/g/64/64",
-  },
-};
+// const comment = {
+//   date: new Date(),
+//   text: "I hope you enjoy learning React!",
+//   author: {
+//     // author is also an object
+//     name: "Hello Kitty",
+//     avatarUrl: "https://placekitten.com/g/64/64",
+//   },
+// };
 
 function App() {
   return (
     <>
-    <MoviesList></MoviesList>
-      {/* // render the Callout component with FullName as children */}
+    <LoginForm></LoginForm>
+    
+    {/* <SampleUncontrolledForm></SampleUncontrolledForm>
+    <MoviesList></MoviesList> */}
+      
+    {/* <Weather></Weather>
+    <BirthdayTranslator></BirthdayTranslator>
+    <MoodChanger></MoodChanger> */}
+    {/* <Counter></Counter>
       <Callout
         title="Nested React Component"
         message="Simple message with a fancy box applied via composition"
       >
         <FullName first="Elon" last="Musk" />
-      </Callout>
-      <ComplexComment
+      </Callout> */}
+      {/* <ComplexComment
         text={comment.text}
         author={comment.author}
         date={comment.date}
@@ -43,10 +57,12 @@ function App() {
       <FullName firstname="John" lastname="kennedy">
         <p>Welcom to the coutnry</p>
       </FullName>
-      {/* <Pet type='cat' color='black' ></Pet>
+       <Pet type='cat' color='black' ></Pet>
       <City name='Melbourne'></City>
       <FirstComponent></FirstComponent>
       <SecondComponent></SecondComponent> */}
+
+      {/* <ExplodingBomb></ExplodingBomb> */}
     </>
   );
 }
