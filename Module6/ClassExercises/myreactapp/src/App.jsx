@@ -17,6 +17,13 @@ import BirthdayTranslator from "./Pages/BrthdayTranslator";
 import Weather from "./Pages/Weather";
 import LoginForm from "./Pages/LoginForm";
 import SampleUncontrolledForm from "./Pages/SampleUncontrolledForm";
+import Clock from "./Pages/Clock";
+import ClockDisplay from "./Pages/ClockDisplay";
+import ActivityFinder from "./Pages/ActivityFinder";
+import CounterRef from "./Pages/CounterRef";
+import VideoPlayer from "./Pages/VideoPlayer";
+import ReducerCounter from "./Pages/ReducerCounter";
+import PostListReducer from "./Pages/PostListReducer";
 // import ExplodingBomb from "./Pages/ExploingBomb";
 
 // object storing comment data - passed as props
@@ -33,7 +40,14 @@ import SampleUncontrolledForm from "./Pages/SampleUncontrolledForm";
 function App() {
   return (
     <>
-    <LoginForm></LoginForm>
+    <PostListReducer></PostListReducer>
+    {/* <ReducerCounter></ReducerCounter> */}
+    {/* <VideoPlayer></VideoPlayer> */}
+    {/* <CounterRef></CounterRef>
+    <ActivityFinder></ActivityFinder> */}
+    {/* <Clock></Clock> */}
+    {/* <ClockDisplay></ClockDisplay> */}
+    {/* <LoginForm></LoginForm> */}
     
     {/* <SampleUncontrolledForm></SampleUncontrolledForm>
     <MoviesList></MoviesList> */}
