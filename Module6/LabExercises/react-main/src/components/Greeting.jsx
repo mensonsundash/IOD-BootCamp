@@ -1,5 +1,6 @@
 import '../App.css';
 
+// M6 LAB EXERCISE 1
 function Greeting(props) {
     return(<>
         <div className="welcome">

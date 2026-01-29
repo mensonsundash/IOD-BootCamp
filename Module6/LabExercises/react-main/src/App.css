@@ -41,7 +41,7 @@
   color: #888;
 }
 
-/* Lab1 Additional css */
+/* LAB1 welcome box*/
 .welcome {
   margin: 1em;
   padding: 1em;
@@ -52,6 +52,7 @@
   color: #888;
 }
 
+/* LAB2: listing <li> design  */
 .catList {
   text-align: left;
 }

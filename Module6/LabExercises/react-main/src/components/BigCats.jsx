@@ -1,6 +1,7 @@
 import SingleCat from "./SingleCat";
 import "../App.css";
 
+// M6 LAB EXERCISE 2 
 //set of array data
 const bigCatLists = [
   { id: 1, name: "African Lion", category: "Savanna", status: "Vulnerable" },
@@ -26,11 +27,11 @@ function BigCats() {
                 <h2>Big Cats List</h2>
 
                 <ul>
-                    {/* mapping full array set and sending through chlid component SingleCat */}
-                    {bigCatLists.map((cat) =>(
+                    {/* mapping full array set and sending through chlid component to render SingleCat row*/}
+                    {bigCatLists.map((cat) =>
                         <SingleCat key={cat.id} name={cat.name} category={cat.category} status={cat.status}></SingleCat>
                         
-                    ))}
+                    )}
                 </ul>
             </div>
         
