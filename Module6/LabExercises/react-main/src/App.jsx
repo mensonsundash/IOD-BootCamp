@@ -1,11 +1,13 @@
 import './App.css'
-import BigCats from './components/BIgCats'
+import BigCats from './components/BigCats'
+import Emoji from './components/Emoji'
 // import Greeting from './components/Greeting'
 
 function App() {
   return (
     <>
-    <BigCats></BigCats>
+    <Emoji />
+    {/* <BigCats></BigCats> */}
       {/* 
       // Greeting component with prop name and children p
       <Greeting name='students' >
