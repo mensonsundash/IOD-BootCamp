@@ -1,6 +1,7 @@
 import SingleCat from "./SingleCat";
 import "../App.css";
 import { useState } from "react";
+import AddCatForm from "./AddCatForm";
 
 // M6 LAB EXERCISE 2 
 //set of array data
@@ -24,19 +25,33 @@ const bigCatLists = [
 
 function BigCats() {
 
-    // LAB Exercise 4: Filtering and sorting
+    // LAB 5: State now holds the list
 
+    const [cats, setCats] = useState(bigCatLists); 
+
+    // LAB Exercise 4: Filtering and sorting
     //default: filter=ALL & sort=NONE
     const [filter, setFilter] = useState("ALL");
     const [sort, setSort] = useState("NONE");
 
-    // list of catgory
+    // list of catgories
     const uniqueCategory = new Set(bigCatLists.map((c) => c.category));
     const categories = ["ALL", ...uniqueCategory];
 
 
+    // form submission
+    const handleAddCat = (newCat) => {
+        setCats([
+            ...cats,
+            {
+                id: cats.length + 1,
+                ...newCat
+            }
+        ])
+    };
+
     //display cat with full list as to prevent array mutation
-    let displayCats = [...bigCatLists];
+    let displayCats = [...cats];
 
     //if filter state changes
     if(filter !=='ALL') {
@@ -54,6 +69,9 @@ function BigCats() {
     return(
             <div className="catList">
                 <h2>Big Cats List</h2>
+                {/* ADD Cats */}
+                {/* <AddCatForm onAddCat = {handleAddCat} categories={{categories.filter((c) => c !== "ALL")}} /> */}
+                <AddCatForm onAddCat={handleAddCat} categories={categories.filter((c) => c !="ALL")}></AddCatForm>
                 {/* FILTERING */}
                 <label>
                     Filter by Category: {" "}
