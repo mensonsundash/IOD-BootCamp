@@ -1,5 +1,6 @@
 import SingleCat from "./SingleCat";
 import "../App.css";
+import { useState } from "react";
 
 // M6 LAB EXERCISE 2 
 //set of array data
@@ -22,13 +23,61 @@ const bigCatLists = [
 ];
 
 function BigCats() {
+
+    // LAB Exercise 4: Filtering and sorting
+
+    //default: filter=ALL & sort=NONE
+    const [filter, setFilter] = useState("ALL");
+    const [sort, setSort] = useState("NONE");
+
+    // list of catgory
+    const uniqueCategory = new Set(bigCatLists.map((c) => c.category));
+    const categories = ["ALL", ...uniqueCategory];
+
+
+    //display cat with full list as to prevent array mutation
+    let displayCats = [...bigCatLists];
+
+    //if filter state changes
+    if(filter !=='ALL') {
+        displayCats = displayCats.filter((cat) => cat.category === filter);
+    }
+
+    //if sort state changes
+    if(sort === "NAME_ASC"){
+        displayCats.sort((a,b) => a.name.localeCompare(b.name));
+    } else if(sort === "NAME_DESC") {
+        displayCats.sort((a,b) => b.name.localeCompare(a.name));
+    }
+
+    
     return(
             <div className="catList">
                 <h2>Big Cats List</h2>
+                {/* FILTERING */}
+                <label>
+                    Filter by Category: {" "}
+                    <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+                        {categories.map((cat) => (
+                            <option key={cat} value={cat}>{cat}</option>
+                        ))}
+                    </select>
+                </label>
 
+                {/* SORTING */}
+                <label style={{marginLeft:"10px"}}>
+                    Sort: {" "}
+                    <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                        <option value="None">None</option>
+                        <option value="NAME_ASC">Name A-Z</option>
+                        <option value="NAME_DESC">Name Z-A</option>
+                    </select>
+                </label>
+                
+                {/* OUTPUT: */}
                 <ul>
                     {/* mapping full array set and sending through chlid component to render SingleCat row*/}
-                    {bigCatLists.map((cat) =>
+                    {displayCats.map((cat) =>
                         <SingleCat key={cat.id} name={cat.name} category={cat.category} status={cat.status}></SingleCat>
                         
                     )}
