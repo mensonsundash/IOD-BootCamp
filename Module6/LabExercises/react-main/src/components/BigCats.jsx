@@ -25,8 +25,7 @@ const bigCatLists = [
 
 function BigCats() {
 
-    // LAB 5: State now holds the list
-
+    // LAB 5: State cats now holds the list
     const [cats, setCats] = useState(bigCatLists); 
 
     // LAB Exercise 4: Filtering and sorting
@@ -35,12 +34,15 @@ function BigCats() {
     const [sort, setSort] = useState("NONE");
 
     // list of catgories
-    const uniqueCategory = new Set(bigCatLists.map((c) => c.category));
+    const uniqueCategory = new Set(cats.map((c) => c.category));
     const categories = ["ALL", ...uniqueCategory];
 
 
     // form submission
     const handleAddCat = (newCat) => {
+
+        // cats list is now added with new sets of object values alongside
+        //newcat parameter comes back from child AddCatForm which takes object of {name, category, status}
         setCats([
             ...cats,
             {
@@ -67,39 +69,48 @@ function BigCats() {
 
     
     return(
-            <div className="catList">
+            <div className="content-body">
                 <h2>Big Cats List</h2>
-                {/* ADD Cats */}
-                {/* <AddCatForm onAddCat = {handleAddCat} categories={{categories.filter((c) => c !== "ALL")}} /> */}
-                <AddCatForm onAddCat={handleAddCat} categories={categories.filter((c) => c !="ALL")}></AddCatForm>
-                {/* FILTERING */}
-                <label>
-                    Filter by Category: {" "}
-                    <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-                        {categories.map((cat) => (
-                            <option key={cat} value={cat}>{cat}</option>
-                        ))}
-                    </select>
-                </label>
+            
+                <div className="container">
+                    {/* ADD Cats */}
+                    {/* <AddCatForm onAddCat = {handleAddCat} categories={{categories.filter((c) => c !== "ALL")}} /> */}
+                    <div className="left-sidebar">
+                        <AddCatForm onAddCat={handleAddCat} categories={categories.filter((c) => c !="ALL")}></AddCatForm>
+                    </div>
+                    
+                    <div className="content-panel">    
+                        {/* FILTERING */}
+                        <label>
+                            Filter by Category: {" "}
+                            <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+                                {categories.map((cat) => (
+                                    <option key={cat} value={cat}>{cat}</option>
+                                ))}
+                            </select>
+                        </label>
 
-                {/* SORTING */}
-                <label style={{marginLeft:"10px"}}>
-                    Sort: {" "}
-                    <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                        <option value="None">None</option>
-                        <option value="NAME_ASC">Name A-Z</option>
-                        <option value="NAME_DESC">Name Z-A</option>
-                    </select>
-                </label>
-                
-                {/* OUTPUT: */}
-                <ul>
-                    {/* mapping full array set and sending through chlid component to render SingleCat row*/}
-                    {displayCats.map((cat) =>
-                        <SingleCat key={cat.id} name={cat.name} category={cat.category} status={cat.status}></SingleCat>
-                        
-                    )}
-                </ul>
+                        {/* SORTING */}
+                        <label style={{marginLeft:"10px"}}>
+                            Sort: {" "}
+                            <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                                <option value="NONE">NONE</option>
+                                <option value="NAME_ASC">Name A-Z</option>
+                                <option value="NAME_DESC">Name Z-A</option>
+                            </select>
+                        </label>
+                    
+                        {/* OUTPUT: */}
+                        <ul>
+                            {/* mapping full array set and sending through chlid component to render SingleCat row*/}
+                            {displayCats.map((cat) =>
+                                <SingleCat key={cat.id} name={cat.name} category={cat.category} status={cat.status}></SingleCat>
+                                
+                            )}
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
         
     );

@@ -63,16 +63,68 @@
   color: #888;
 }
 
-/* LAB2: listing <li> design  */
-.catList {
+/* LAB2: listing <li> design  & LAB4: Filterings */
+.content-body{
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* sidebar with forms */
+.left-sidebar {
+  flex: 1;
+  max-width: 320px;
+}
+
+/* main content panel (filter & lists) */
+.content-panel {
+  flex:2;
   text-align: left;
 }
 
-.catList ul {
+/* filter row */
+.content-panel label {
+  font-weight: 600;
+  /* color: #222; */
+  margin-right: 12px;
+}
+.content-panel select {
+  padding: 0.4rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-left: 8px;
+  /* background: #fff; */
+}
+
+/* list style */
+.content-panel ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.content-panel ul li {
+  background: #ffffff;
+  color: #111;
+  border: none;
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.8rem;  
+}
+
+
+/* .container ul {
   list-style: none;
 }
 
-.catList ul li {
+.container ul li {
   background: #fefefe;
   color: black;
   border: none;
@@ -80,7 +132,7 @@
   padding: 0.4em;
   margin: 0.4em;
   padding-left: 1em;
-}
+} */
 
 
 /* LAB3: Random Emoji Switch */
@@ -96,7 +148,64 @@
   color: black;
 }
 
-/* LAB4: Add Cat */
+/* LAB5: Add Cat */
 .AddCatForm {
-  color: black;
+  background: #ffffff;
+  color: #111;
+  border: none;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.AddCatForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  /* align-self: start;
+  justify-content: space-around; */
+}
+
+.AddCatForm div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.AddCatForm label {
+  font-weight: 600;
+  color: #222;
+  /* margin-bottom: 4px; */
+}
+
+.AddCatForm input, select {
+  /* width: 100%; */
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fff;
+  color: #111;
+}
+
+.AddCatForm button:hover {
+  opacity: 0.92;
+}
+
+
+/* ---------------------------
+   Responsive (mobile)
+----------------------------*/
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-sidebar {
+    width: 100%;
+  }
+
+  .content-panel {
+    width: 100%;
+  }
 }
