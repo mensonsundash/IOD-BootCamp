@@ -30,7 +30,7 @@ function AddCatForm({onAddCat, categories}){
 
     return(
         <>
-        <div className="AddCatForm componentBox">
+        <div className="form-container">
             <h3>Add New Big Cat</h3>
             <form onSubmit={handleSubmit}>
                 <div>

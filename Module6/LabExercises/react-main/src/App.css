@@ -149,7 +149,7 @@
 }
 
 /* LAB5: Add Cat */
-.AddCatForm {
+.form-container {
   background: #ffffff;
   color: #111;
   border: none;
@@ -158,27 +158,29 @@
   text-align: left;
 }
 
-.AddCatForm form {
+.form-container form {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
   /* align-self: start;
   justify-content: space-around; */
 }
-
-.AddCatForm div {
+.flex-row {
+  flex-direction: row !important;
+}
+.form-container div {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.AddCatForm label {
+.form-container label {
   font-weight: 600;
   color: #222;
   /* margin-bottom: 4px; */
 }
 
-.AddCatForm input, select {
+.form-container input, select {
   /* width: 100%; */
   padding: 0.6rem 0.75rem;
   border: 1px solid #ddd;
@@ -188,11 +190,22 @@
   color: #111;
 }
 
-.AddCatForm button:hover {
+.form-container button:hover {
   opacity: 0.92;
 }
 
-
+/* LAB 6 */
+.result-box {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.result-box .result {
+  font-size: 34px;
+  font-weight: 600;
+  font-family:'Times New Roman', Times, serif;
+}
 /* ---------------------------
    Responsive (mobile)
 ----------------------------*/
