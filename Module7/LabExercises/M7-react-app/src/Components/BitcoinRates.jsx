@@ -79,6 +79,10 @@ function BitcoinRates() {
     
     return(
         <>
+        <div>
+            <p>Bitcoin Rates fetch from external URL and display current price of Bitcoin in the selected Currency</p>
+            <p>It uses UseEffect Hook with Cleanup and appropriate Dependencies</p>
+        </div>
             <div className="BitcoinRates ComponentBox">
                 <h3>Bitcoin Exchange Rates</h3>
                 <label>Choose Currency:
