@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useData } from "../Hooks/useData";
 
 function ActivityFinder() {
