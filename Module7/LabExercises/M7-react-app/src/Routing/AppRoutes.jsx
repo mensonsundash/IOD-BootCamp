@@ -7,6 +7,7 @@ import BitcoinRatesReducer from "../Components/BitcoinRatesReducer";
 import EmojiWithContext from "../Components/EmojiWithContext";
 import EmojiProvider from "../Components/Providers/EmojiProvider";
 import BitcoinRatesWithContext from "../Components/BitcoinRatesWithContext";
+import Login from "../Components/Login";
 function AppRoutes() {
 
     return (
@@ -27,7 +28,8 @@ function AppRoutes() {
                         </EmojiProvider>
                     }
                 ></Route>
-                
+            {/* Lab Exercise-4 As already done Lab-2-3  */}
+                <Route path="/login" element={<Login></Login>}></Route>
 
             <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
         </Routes>

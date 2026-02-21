@@ -11,6 +11,7 @@ function NavBar() {
                 <li><NavLink to="/bitcoinRatesCustom">BitcoinRatesCustom</NavLink></li>
                 <li><NavLink to="/bitcoinRatesReducer">BitcoinRatesReducer</NavLink></li>
                 <li><NavLink to="/emojiWithContext">EmojiWithContext</NavLink></li>
+                <li><NavLink to="/login">Login</NavLink></li>
             </ul>{" "}
         </nav>
         </>

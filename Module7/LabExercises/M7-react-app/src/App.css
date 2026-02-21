@@ -1,8 +1,13 @@
+*{
+  /* this will make width of box to be measured on the basis of border */
+  box-sizing: border-box;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
 .logo {
@@ -45,7 +50,7 @@
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #e5e7eb;
-  padding: 12px 16px;
+  padding: 12px 0;
   z-index: 1000;
 }
 
@@ -57,9 +62,17 @@
   list-style: none;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   
 }
+/* making last button ( child ) of list having difference style */
+.NavBar ul li:last-child{
+  margin-left: auto;
+}
+.NavBar ul li:last-child a{
+  background: #6cb5f8;
+}
+
 /* Links as buttons */
 .NavBar ul li a {
   text-decoration: none;
@@ -156,4 +169,53 @@
   .BitcoinRates select {
     width: 100%;
   }
+}
+
+
+/* Login Form Style */
+
+.login-card {
+  background: #ffff;
+  padding: 2rem;
+  width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #111827;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background: #2563eb;
+  color: white;
+}
+
+.login-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
