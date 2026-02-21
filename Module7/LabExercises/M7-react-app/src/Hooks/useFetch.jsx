@@ -13,7 +13,6 @@ function useFetch(url) {
     useEffect(() => {
         
         if(url) {
-            console.log(url)
             //Initial error message set as default at every changes
             setError('Ok');
 

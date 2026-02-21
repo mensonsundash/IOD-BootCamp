@@ -29,6 +29,7 @@ function BitcoinRatesReducer(){
     return(
         <>
             <div>
+                <h2>Lab Exercise 2 Extension</h2>
                 <p>Bitcoin Rates fetch from external URL and display current price of Bitcoin in the selected Currency</p>
                 <p>It uses Custom Hook for extracting data Synchonization Process </p>
                 <p>Implemented with useReducer to handle the internal state management of custom hook.</p>

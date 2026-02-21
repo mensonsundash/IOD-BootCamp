@@ -10,6 +10,7 @@ function NavBar() {
                 <li><NavLink to="/bitcoinRates">BitcoinRates</NavLink></li>
                 <li><NavLink to="/bitcoinRatesCustom">BitcoinRatesCustom</NavLink></li>
                 <li><NavLink to="/bitcoinRatesReducer">BitcoinRatesReducer</NavLink></li>
+                <li><NavLink to="/emojiWithContext">EmojiWithContext</NavLink></li>
             </ul>{" "}
         </nav>
         </>

@@ -1,7 +1,7 @@
 import './App.css'
 
 import NavBar from './Components/Common/NavBar'
-import AppRoutes from './utils/AppRoutes'
+import AppRoutes from './Routing/AppRoutes'
 
 function App() {
 

@@ -1,12 +1,18 @@
+import { useContext } from "react";
 import { useEffect , useState } from "react";
+import { EmojiContext } from "./Providers/EmojiProvider";
 
 // List of currencies user can choose from
 const currencies = ['USD', 'AUD', 'NZD', 'GBP', 'EUR', 'SGD','ERROR'];
 
-function BitcoinRates() {
+function BitcoinRatesWithContext() {
     const [currency, setCurrency] = useState(currencies[0]); // currency: stores the currently selected currency (default = first item => "USD")
     const [price, setPrice] = useState(null);  // price: stores the fetched BTC price (null means “not loaded yet”)
     const[error, setError] = useState("Ok"); //error; stores the error message (default Ok)
+
+    // #### CONTEXT PROVIDER
+    //getting the context functions EmojiContext from EmojiProvider
+    const {currentMood} = useContext(EmojiContext)
 
     //Mapping & Create <option> elements for the <select> dropdown
     const options = currencies.map(curr =>
@@ -80,12 +86,16 @@ function BitcoinRates() {
     return(
         <>
         <div>
-            <h2>Lab Exercise 1</h2>
-            <p>Bitcoin Rates fetch from external URL and display current price of Bitcoin in the selected Currency</p>
-            <p>It uses UseEffect Hook with Cleanup and appropriate Dependencies</p>
+            <h3>2. BitcoinRates Component</h3>
+            <p>Bitcoin get Current Mood from EmojiProvider</p>
+            <p>It will get mood names from while switching moods from 1. Emoji Component</p>
         </div>
             <div className="BitcoinRates ComponentBox">
-                <h3>Bitcoin Exchange Rates</h3>
+                <h3>Bitcoin Exchange Rates {" "}
+                    <span style={{fontSize: 14, fontWeight: 400, color: 'red'}}>
+                        (Mood: {currentMood})
+                    </span>
+                </h3>
                 <label>Choose Currency:
 
                     <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
@@ -104,4 +114,4 @@ function BitcoinRates() {
     )
 }
 
-export default BitcoinRates;
+export default BitcoinRatesWithContext;

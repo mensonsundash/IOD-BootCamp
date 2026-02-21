@@ -10,9 +10,9 @@ const initalState = {
 function fetchReducer(state, action) {
     switch(action.type) {
         case "FETCH_START":
-            return { ...state, data:null, error: null };
+            return { ...state, data:null, error: "Ok" };
         case "FETCH_SUCCESS":
-            return { ...state,  data: action.payload,  error: null };
+            return { ...state,  data: action.payload,  error: "Ok" };
         case "FETCH_ERROR":
             return  { ...state, data: null, error: action.payload };
         default:
