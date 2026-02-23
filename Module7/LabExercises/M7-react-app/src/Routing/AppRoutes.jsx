@@ -8,13 +8,21 @@ import EmojiWithContext from "../Components/EmojiWithContext";
 import EmojiProvider from "../Components/Providers/EmojiProvider";
 import BitcoinRatesWithContext from "../Components/BitcoinRatesWithContext";
 import Login from "../Components/Login";
+import MUILogin from "../Components/MUILogin ";
+import MUIBitcoinRates from "../Components/MUIBitcoinRates";
 function AppRoutes() {
 
     return (
         <Routes>
             <Route path="/" element={<HomePage></HomePage>}></Route>
             {/* Lab Exercise-1 BitcoinRates*/}
-                <Route path="/bitcoinRates" element={<BitcoinRates></BitcoinRates>}></Route>
+
+                {/* ######### Exercise 1-4 without MUI ############# */}
+                    {/* <Route path="/bitcoinRates" element={<BitcoinRates></BitcoinRates>}></Route> */}
+                
+                {/* ##### Exercise 5 With MUI ##### */}    
+                <Route path="/bitcoinRates" element={<MUIBitcoinRates></MUIBitcoinRates>}></Route>
+            
             {/* Lab Exercise-2 BitcoinRatesCustom Hooks */}
                 <Route path="/bitcoinRatesCustom" element={<BitcoinRatesCustom></BitcoinRatesCustom>}></Route>
             {/* Lab Exercise-2 BitcoinRates Extension with Reducer */}
@@ -29,7 +37,12 @@ function AppRoutes() {
                     }
                 ></Route>
             {/* Lab Exercise-4 As already done Lab-2-3  */}
-                <Route path="/login" element={<Login></Login>}></Route>
+                
+                {/* ######### Exercise 1-4 without MUI ############# */}
+                {/* <Route path="/login" element={<Login></Login>}></Route> */}
+                
+                {/* ##### Exercise 5 with MUI ##### */}
+                    <Route path="/login" element={<MUILogin></MUILogin>}></Route>
 
             <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
         </Routes>
