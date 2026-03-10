@@ -1,12 +1,16 @@
-const express = require("express");
+const express = require("express"); //import express module
 
-const router = express.Router();
+const router = express.Router(); // creating router object from express
 
+//import controller functions
 const controller = require("../controllers/calculatorController");
 
-router.get("/add", controller.addNumbers);
-router.get("/substract", controller.substractNumbers);
-router.get("/multiply", controller.multiplyNumbers);
-router.get('/divide', controller.divideNumbers);
+/**
+ * These routes listen for GET requests from the client.
+ */
+router.get("/add", controller.addNumbers); // Route for addition
+router.get("/substract", controller.substractNumbers); // Route for substraction
+router.get("/multiply", controller.multiplyNumbers); // Route for multiplication
+router.get('/divide', controller.divideNumbers); // Route for division
 
 module.exports = router;
