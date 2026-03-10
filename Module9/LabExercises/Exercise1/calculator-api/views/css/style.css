@@ -1,0 +1,8 @@
+:root {
+  --ink: #0b1220;
+  --gradient-bg: linear-gradient(180deg, rgba(13,110,253,0.08), rgba(25,135,84,0.06));
+}
+body {
+    background: var(--gradient-bg);
+    color: var(--ink);
+}
