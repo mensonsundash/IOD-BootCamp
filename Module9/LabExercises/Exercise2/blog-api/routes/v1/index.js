@@ -11,5 +11,8 @@ app.get("/", (req, res) => {
 //User module
 app.use("/user", require("./user.routes"));
 
+//Post module
+app.use("/post", require("./post.routes"));
+
 
 module.exports = app;
