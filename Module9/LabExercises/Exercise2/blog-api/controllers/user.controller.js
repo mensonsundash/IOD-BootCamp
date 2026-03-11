@@ -16,7 +16,7 @@ async function userList(req, res){
 /**
  * Function to create a user
  */
-async function createUser(){
+async function createUser(req,res){
     try{
         const result = "Create User Controller";
         res.status(200).json({ data: result });
@@ -28,7 +28,7 @@ async function createUser(){
 /**
  * Function to update a user
  */
-async function updateUser(){
+async function updateUser(req,res){
     try{
         const result = "Update User Controller";
         res.status(200).json({ data: result });
@@ -40,7 +40,7 @@ async function updateUser(){
 /**
  * Function to delete a user
  */
-async function deleteUser(){
+async function deleteUser(req,res){
     try{
         const result = "Delete User Controller";
         res.status(200).json({ data: result });
