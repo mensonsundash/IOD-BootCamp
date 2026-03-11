@@ -8,7 +8,7 @@ app.get("/", (req,res) => {
     res.json({message: `Blogging Api app is running on PORT:${PORT}`})
 });
 
-//Main API Routes (Pathway to all routes)
+//Main API Routes (Pathway to all routes) -:Connecting Routes to Express App
 app.use("/api", require("./routes"))
 
 //listening port to test

@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
     res.json({message: "Welcome to api service: V1"})
 })
 
-/** using all other routing **/
+/** using all other routing -:Connecting Routes to Express App**/
 
 //User module
 app.use("/user", require("./user.routes"));
