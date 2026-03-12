@@ -6,9 +6,13 @@ const app = express(); //creating express app
 require("dotenv").config();
 
 //importing dbconnect
-const dbConnect = require("./dbConnect");
+require("./dbConnect");
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
+
+//MIDDLEWARE: parse requests of Content-type - application/json
+app.use(express.json());
+
 //Testing ROUTES
 app.get("/", (req,res) => {
     res.json({message: `Blogging Api app is running on PORT:${PORT}`})
