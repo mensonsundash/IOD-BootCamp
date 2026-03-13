@@ -1,5 +1,6 @@
 'use strict'
 
 module.exports = {
-    User: require("./user.model")
+    User: require("./user.model"),
+    Post: require("./post.model")
 }
