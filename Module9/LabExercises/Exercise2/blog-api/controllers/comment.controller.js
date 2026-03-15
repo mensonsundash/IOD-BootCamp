@@ -24,9 +24,10 @@ async function getCommentByPost(req, res){
     try{
         // Read comment id from router parameter /:id
         const post_id = req.params.postId;
+        const {userId } = req.body;
 
         //verify user exist
-        const user = await Models.User.findById(user_id);
+        const user = await Models.User.findById(userId);
         if(!user) {
             return res.status(404).json({message: "User not found"})
         }
@@ -137,18 +138,17 @@ async function updateComment(req,res){
 async function deleteComment(req,res){
     try{
         const commentId = req.params.id;
-
         const comment = await Models.Comment.findById(commentId);
 
         //check if a referenced user exists
-        const user = await Models.User.findById(userId);
+        const user = await Models.User.findById(comment.userId);
         //if user not exist then response with message and stop inserting
         if(!user) {
             return res.status(404).json({message: "User not found"})
         }
 
         // check if a referenced post exists, if not then response with error and stop
-        const post = await Models.Post.findById(postId);
+        const post = await Models.Post.findById(comment.postId);
         if(!post){
             return res.status(404).json({message: "Post not found"})
         }
@@ -161,7 +161,7 @@ async function deleteComment(req,res){
 
         res.status(200).json({ message: "Comment deleted successfully", data: deletedComment });
     }catch(error) {
-        res.statu(400).json({ message: "Failed to delete comment", errors: error });
+        res.status(400).json({ message: "Failed to delete comment", errors: error });
     }
 }
 

@@ -6,8 +6,8 @@ const { getAllComments, getCommentByPost, createComment, updateComment, deleteCo
 
 //RESTful API endpoints
 app.get("/", getAllComments); // get all comments
-app.get("/user/:userId", getCommentByPost); //get comments by user id
-app.comment("/", createComment); // create comment
+app.get("/:postId", getCommentByPost); //get comments by user id
+app.post("/", createComment); // create comment
 app.put("/:id", updateComment); // update comment
 app.delete("/:id", deleteComment); //delete comment
 

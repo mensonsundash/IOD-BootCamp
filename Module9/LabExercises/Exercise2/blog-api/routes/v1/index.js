@@ -14,5 +14,11 @@ app.use("/user", require("./user.routes"));
 //Post module
 app.use("/post", require("./post.routes"));
 
+//Comment module
+app.use("/comment", require("./comment.routes"));
+
+//Like module
+app.use("/like", require("./like.routes"))
+
 
 module.exports = app;
