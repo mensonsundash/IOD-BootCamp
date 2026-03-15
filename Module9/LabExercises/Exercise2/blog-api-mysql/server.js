@@ -15,7 +15,9 @@ app.use(express.json());
 //testing requests
 app.get("/", (req, res) => {
     res.json({message: `Blogging API mysql app is running on PORT: ${PORT}`});
-})
+});
+
+app.use("/api", require("./routes"));
 
 //listening port to test
 app.listen(PORT, () => {
