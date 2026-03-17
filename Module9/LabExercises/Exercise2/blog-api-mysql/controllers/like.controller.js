@@ -62,13 +62,13 @@ async function addLike(req, res) {
         //checking for user exist
         if(userId){
             const user = await Models.User.findByPk(userId);
-            if(!user) res.status(404).json({ message: "User not found" });
+            if(!user) return res.status(404).json({ message: "User not found" });
         }
         
         //checking for post exist
         if(postId){
             const post = await Models.Post.findByPk(postId);
-            if(!post) res.status(404).json({ message: "Post not found" });
+            if(!post) return res.status(404).json({ message: "Post not found" });
         }
 
         const existingLike = await Models.Like.findOne({
